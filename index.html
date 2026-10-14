@@ -7,10 +7,9 @@
     <title>Veterinaria Silv | Cuidado Especializado para Perros y Gatos</title>
 
     <meta name="description" content="Veterinaria Silv en Santa Cruz de Yojoa, Cortés. Consulta veterinaria, vacunación, cirugías, laboratorio, grooming y atención de emergencias.">
-
     <meta name="theme-color" content="#126B70">
 
-    <!-- ESTILOS ORIGINALES DEL PROYECTO -->
+    <!-- ESTILOS ORIGINALES -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/css/slicknav.css">
@@ -24,11 +23,6 @@
     <link rel="stylesheet" href="assets/css/style.css">
 
     <style>
-        /* =========================================
-           VETERINARIA SILV
-           TURQUESA AZULADO + VERDE MENTA
-        ========================================= */
-
         :root {
             --mint-primary: #19B7B0;
             --mint-secondary: #168FAD;
@@ -36,21 +30,16 @@
             --mint-light: #E6F7F7;
             --mint-soft: #F4FBFC;
             --mint-pale: #D4F0EF;
-
             --dark: #173D49;
             --text: #536B73;
             --white: #FFFFFF;
-
             --shadow-sm: 0 8px 25px rgba(18,107,112,.09);
             --shadow-md: 0 15px 40px rgba(18,107,112,.14);
             --shadow-lg: 0 25px 60px rgba(18,107,112,.18);
-
             --radius: 22px;
         }
 
         * {
-            margin: 0;
-            padding: 0;
             box-sizing: border-box;
         }
 
@@ -60,6 +49,7 @@
         }
 
         body {
+            margin: 0;
             background: var(--mint-light) !important;
             color: var(--dark) !important;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -76,7 +66,7 @@
         input:focus-visible,
         select:focus-visible,
         textarea:focus-visible {
-            outline: 3px solid #19B7B0;
+            outline: 3px solid var(--mint-primary);
             outline-offset: 4px;
         }
 
@@ -89,9 +79,7 @@
             color: #FFFFFF;
         }
 
-        /* =========================================
-           ENCABEZADO
-        ========================================= */
+        /* ENCABEZADO */
 
         .header-area {
             background: rgba(255,255,255,.97) !important;
@@ -172,9 +160,7 @@
             box-shadow: 0 12px 30px rgba(22,143,173,.35);
         }
 
-        /* =========================================
-           MENÚ MÓVIL
-        ========================================= */
+        /* MENÚ MÓVIL */
 
         .slicknav_menu {
             background: #FFFFFF !important;
@@ -205,13 +191,17 @@
             border-radius: 8px;
         }
 
-        /* =========================================
-           PORTADA PRINCIPAL
-           SE CONSERVA LA IMAGEN ORIGINAL
-        ========================================= */
+        /* PORTADA */
+
+        .slider-area,
+        .slider-active,
+        .single-slider {
+            width: 100%;
+            max-width: 100%;
+        }
 
         .slider-bg-vet {
-            min-height: 720px;
+            min-height: 680px;
             background-image:
                 linear-gradient(
                     100deg,
@@ -222,6 +212,7 @@
                 url('https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=85&w=1800&auto=format&fit=crop') !important;
             background-size: cover !important;
             background-position: center center !important;
+            background-repeat: no-repeat !important;
             position: relative;
             overflow: hidden;
         }
@@ -241,6 +232,7 @@
         .hero__caption {
             position: relative;
             z-index: 2;
+            width: 100%;
             max-width: 720px;
             padding: 35px 0;
             animation: heroEntrance .8s ease both;
@@ -313,17 +305,11 @@
             }
         }
 
-        /* =========================================
-           TÍTULOS Y SECCIONES
-        ========================================= */
+        /* TÍTULOS Y SECCIONES */
 
         .section-padding30 {
             padding: 100px 0 !important;
-            background: linear-gradient(
-                180deg,
-                #EAF7F8 0%,
-                #F5FBFC 100%
-            ) !important;
+            background: linear-gradient(180deg,#EAF7F8 0%,#F5FBFC 100%) !important;
         }
 
         .section-tittle span {
@@ -348,12 +334,26 @@
             letter-spacing: -1px;
         }
 
-        /* =========================================
-           TARJETAS DE SERVICIOS
-        ========================================= */
+        /* SERVICIOS: ESTRUCTURA Y FOTOGRAFÍAS */
+
+        .our-services .row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: stretch;
+            row-gap: 28px;
+        }
+
+        .our-services .row > .service-column {
+            display: flex;
+            flex-direction: column;
+        }
 
         .single-services {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
             height: 100%;
+            min-width: 0;
             background: #FFFFFF !important;
             border: 1px solid rgba(25,183,176,.16) !important;
             border-radius: 24px !important;
@@ -377,7 +377,7 @@
         }
 
         .single-services:hover {
-            transform: translateY(-8px);
+            transform: translateY(-6px);
             box-shadow: 0 22px 48px rgba(23,103,117,.15) !important;
         }
 
@@ -385,19 +385,30 @@
             opacity: 1;
         }
 
+        /* Las imágenes llenan la tarjeta sin deformarse */
         .single-services img {
             display: block;
             width: 100%;
-            height: 230px;
+            height: 260px;
+            min-height: 260px;
+            max-width: 100%;
             object-fit: cover;
+            object-position: center;
+            padding: 0;
+            margin: 0;
+            background: #E6F7F7;
+            flex-shrink: 0;
             transition: transform .5s ease;
         }
 
         .single-services:hover img {
-            transform: scale(1.045);
+            transform: scale(1.025);
         }
 
         .services-cap {
+            flex: 1;
+            width: 100%;
+            min-width: 0;
             padding: 27px !important;
         }
 
@@ -407,6 +418,7 @@
             line-height: 1.4;
             font-weight: 800 !important;
             margin-bottom: 12px;
+            overflow-wrap: break-word;
         }
 
         .services-cap p {
@@ -414,26 +426,27 @@
             font-size: 14px;
             line-height: 1.8;
             margin-bottom: 0;
+            overflow-wrap: break-word;
         }
 
-        /* =========================================
-           FORMULARIO DE CITAS
-        ========================================= */
+        .mb-30 {
+            margin-bottom: 30px !important;
+        }
+
+        /* FORMULARIO DE CITAS */
 
         .contact-form-main {
             padding: 110px 0 !important;
             background:
-                linear-gradient(
-                    110deg,
-                    rgba(228,247,248,.94),
-                    rgba(236,248,247,.84)
-                ),
+                linear-gradient(110deg,rgba(228,247,248,.94),rgba(236,248,247,.84)),
                 url('https://images.unsplash.com/photo-1543466835-00a7907e9de1?q=85&w=1600&auto=format&fit=crop')
                 center/cover no-repeat !important;
             position: relative;
         }
 
         .form-wrapper {
+            width: 100%;
+            max-width: 100%;
             padding: 45px !important;
             background: rgba(255,255,255,.97) !important;
             border: 1px solid rgba(25,183,176,.20) !important;
@@ -442,10 +455,19 @@
             backdrop-filter: blur(15px);
         }
 
+        .form-box,
+        .select-itms {
+            width: 100%;
+            min-width: 0;
+        }
+
         .form-box input,
         .form-box textarea,
         .select-itms select {
+            display: block;
             width: 100%;
+            max-width: 100%;
+            min-width: 0;
             border: 2px solid #D8ECEE !important;
             border-radius: 13px !important;
             background: #F9FDFD !important;
@@ -480,6 +502,7 @@
             align-items: center;
             justify-content: center;
             gap: 10px;
+            max-width: 100%;
             border: none !important;
             padding: 15px 28px !important;
             background: linear-gradient(135deg,#20C4B8,#168FAD) !important;
@@ -496,20 +519,12 @@
             box-shadow: 0 15px 30px rgba(22,143,173,.35);
         }
 
-        /* =========================================
-           FRANJA DE EMERGENCIAS
-           SE CONSERVA LA IMAGEN ORIGINAL
-        ========================================= */
+        /* FRANJA DE EMERGENCIAS */
 
         .contact-animal-owner {
             padding: 100px 20px !important;
             background:
-                linear-gradient(
-                    120deg,
-                    rgba(13,58,75,.96),
-                    rgba(18,107,112,.91),
-                    rgba(22,143,145,.85)
-                ),
+                linear-gradient(120deg,rgba(13,58,75,.96),rgba(18,107,112,.91),rgba(22,143,145,.85)),
                 url('https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=85&w=1600&auto=format&fit=crop')
                 center/cover no-repeat !important;
             position: relative;
@@ -559,17 +574,10 @@
             color: var(--mint-dark) !important;
         }
 
-        /* =========================================
-           PIE DE PÁGINA
-        ========================================= */
+        /* PIE DE PÁGINA */
 
         .footer-area {
-            background: linear-gradient(
-                135deg,
-                #123D50,
-                #126B70,
-                #168F91
-            ) !important;
+            background: linear-gradient(135deg,#123D50,#126B70,#168F91) !important;
             padding-top: 80px !important;
         }
 
@@ -655,9 +663,7 @@
             padding: 15px 0;
         }
 
-        /* =========================================
-           WHATSAPP FLOTANTE
-        ========================================= */
+        /* WHATSAPP FLOTANTE */
 
         .whatsapp-float {
             position: fixed;
@@ -685,9 +691,7 @@
             box-shadow: 0 15px 35px rgba(32,201,151,.45);
         }
 
-        /* =========================================
-           CARGA Y DETALLES
-        ========================================= */
+        /* PRELOADER */
 
         #preloader-active {
             background: #FFFFFF;
@@ -697,13 +701,19 @@
             color: #168FAD !important;
         }
 
-        .mb-30 {
-            margin-bottom: 30px !important;
-        }
+        /* COMPUTADORAS */
 
-        /* =========================================
-           DISEÑO RESPONSIVE
-        ========================================= */
+        @media (min-width: 992px) {
+            .our-services .row > .service-column {
+                flex: 0 0 33.333333%;
+                max-width: 33.333333%;
+            }
+
+            .single-services img {
+                height: 260px;
+                min-height: 260px;
+            }
+        }
 
         @media (max-width: 1199px) {
             .logo-text {
@@ -717,17 +727,29 @@
             }
         }
 
-        @media (max-width: 991px) {
+        /* TABLETAS */
+
+        @media (min-width: 768px) and (max-width: 991px) {
             .main-header {
                 min-height: 72px;
             }
 
             .slider-bg-vet {
-                min-height: 650px;
+                min-height: 620px;
             }
 
             .hero__caption {
                 padding: 40px 0;
+            }
+
+            .our-services .row > .service-column {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+
+            .single-services img {
+                height: 240px;
+                min-height: 240px;
             }
 
             .form-wrapper {
@@ -735,17 +757,20 @@
             }
         }
 
+        /* CELULARES */
+
         @media (max-width: 767px) {
             html {
                 scroll-padding-top: 70px;
             }
 
             .slider-bg-vet {
-                min-height: 650px;
-                background-position: 58% center !important;
+                min-height: 600px;
+                background-position: 65% center !important;
             }
 
             .hero__caption {
+                max-width: 100%;
                 padding: 30px 0;
             }
 
@@ -778,16 +803,22 @@
                 font-size: 31px;
             }
 
+            .our-services .row > .service-column {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+
             .single-services img {
-                height: 220px;
+                height: 250px;
+                min-height: 250px;
             }
 
             .services-cap {
-                padding: 23px !important;
+                padding: 22px !important;
             }
 
             .form-wrapper {
-                padding: 24px !important;
+                padding: 22px !important;
                 border-radius: 22px !important;
             }
 
@@ -906,7 +937,7 @@
 
     <main>
 
-        <!-- PORTADA -->
+        <!-- PORTADA PRINCIPAL -->
 
         <section class="slider-area">
             <div class="slider-active dot-style">
@@ -959,12 +990,13 @@
 
                     <!-- SERVICIO 1 -->
 
-                    <div class="col-lg-4 col-md-6 col-sm-6 mb-30">
+                    <div class="col-lg-4 col-md-6 col-sm-6 mb-30 service-column">
                         <div class="single-services text-center">
                             <img
                                 src="https://img.sanishtech.com/u/587af805aff788bf5fb49f382a2718d7.jpg"
                                 alt="Consulta veterinaria para gatos"
-                                loading="lazy">
+                                loading="lazy"
+                                decoding="async">
 
                             <div class="services-cap">
                                 <h5>🏥 Consulta General</h5>
@@ -978,12 +1010,13 @@
 
                     <!-- SERVICIO 2 -->
 
-                    <div class="col-lg-4 col-md-6 col-sm-6 mb-30">
+                    <div class="col-lg-4 col-md-6 col-sm-6 mb-30 service-column">
                         <div class="single-services text-center">
                             <img
                                 src="https://img.sanishtech.com/u/25e715d309c25fc089208d6558c59b8b.jpg"
                                 alt="Vacunación veterinaria"
-                                loading="lazy">
+                                loading="lazy"
+                                decoding="async">
 
                             <div class="services-cap">
                                 <h5>💉 Vacunación & Salud</h5>
@@ -997,12 +1030,13 @@
 
                     <!-- SERVICIO 3 -->
 
-                    <div class="col-lg-4 col-md-6 col-sm-6 mb-30">
+                    <div class="col-lg-4 col-md-6 col-sm-6 mb-30 service-column">
                         <div class="single-services text-center">
                             <img
                                 src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?q=85&w=700&auto=format&fit=crop"
                                 alt="Grooming veterinario"
-                                loading="lazy">
+                                loading="lazy"
+                                decoding="async">
 
                             <div class="services-cap">
                                 <h5>🛁 Grooming & Estética</h5>
@@ -1016,12 +1050,13 @@
 
                     <!-- SERVICIO 4 -->
 
-                    <div class="col-lg-4 col-md-6 col-sm-6 mb-30">
+                    <div class="col-lg-4 col-md-6 col-sm-6 mb-30 service-column">
                         <div class="single-services text-center">
                             <img
                                 src="https://img.sanishtech.com/u/5718fbc72a7013c09f8815f89e77c3f1.jpg"
                                 alt="Cirugía veterinaria"
-                                loading="lazy">
+                                loading="lazy"
+                                decoding="async">
 
                             <div class="services-cap">
                                 <h5>⚕️ Cirugías</h5>
@@ -1035,12 +1070,13 @@
 
                     <!-- SERVICIO 5 -->
 
-                    <div class="col-lg-4 col-md-6 col-sm-6 mb-30">
+                    <div class="col-lg-4 col-md-6 col-sm-6 mb-30 service-column">
                         <div class="single-services text-center">
                             <img
                                 src="https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?q=85&w=700&auto=format&fit=crop"
                                 alt="Laboratorio veterinario"
-                                loading="lazy">
+                                loading="lazy"
+                                decoding="async">
 
                             <div class="services-cap">
                                 <h5>🔬 Laboratorio Clínico</h5>
@@ -1054,12 +1090,13 @@
 
                     <!-- SERVICIO 6 -->
 
-                    <div class="col-lg-4 col-md-6 col-sm-6 mb-30">
+                    <div class="col-lg-4 col-md-6 col-sm-6 mb-30 service-column">
                         <div class="single-services text-center">
                             <img
                                 src="https://img.sanishtech.com/u/92db26b61db8c71752ad552e00afafeb.jpg"
                                 alt="Emergencias veterinarias"
-                                loading="lazy">
+                                loading="lazy"
+                                decoding="async">
 
                             <div class="services-cap">
                                 <h5>🚨 Emergencias 24/7</h5>
@@ -1354,7 +1391,7 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- SCRIPTS DEL PROYECTO -->
+    <!-- SCRIPTS ORIGINALES -->
 
     <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
     <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
