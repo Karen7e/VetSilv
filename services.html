@@ -1,16 +1,17 @@
 <!doctype html>
-<html class="no-js" lang="es">
+<html lang="es">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Servicios Médicos | Veterinaria Silv</title>
-    <meta name="description" content="Servicios veterinarios integrales para tus mascotas en Veterinaria Silv.">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Servicios veterinarios integrales para tus mascotas en Veterinaria Silv.">
+    <meta name="theme-color" content="#1ABC9C">
 
-    <link rel="manifest" href="site.webmanifest">
+    <title>Servicios Médicos | Veterinaria Silv</title>
+
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
 
-    <!-- CSS del sitio -->
+    <!-- Plantilla original -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/css/slicknav.css">
@@ -31,7 +32,10 @@
             --dark: #0E6251;
             --pale: #E8F8F5;
             --text: #24454A;
+            --white: #FFFFFF;
         }
+
+        /* CONFIGURACIÓN GENERAL */
 
         * {
             box-sizing: border-box;
@@ -39,56 +43,58 @@
 
         html {
             scroll-behavior: smooth;
+            scroll-padding-top: 90px;
         }
 
         body {
-            background:
-                radial-gradient(
-                    ellipse at 8% 12%,
-                    rgba(46, 196, 182, 0.14),
-                    transparent 34%
-                ),
-                radial-gradient(
-                    ellipse at 92% 78%,
-                    rgba(22, 160, 133, 0.11),
-                    transparent 35%
-                ),
-                #F0FAF8 !important;
+            margin: 0;
+            overflow-x: hidden;
+            background: #F0FAF8 !important;
             color: var(--text) !important;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
         }
 
-        main,
-        .our-services {
-            background:
-                radial-gradient(
-                    circle at 10% 20%,
-                    rgba(26, 188, 156, 0.08),
-                    transparent 25%
-                ),
-                radial-gradient(
-                    circle at 90% 70%,
-                    rgba(18, 63, 74, 0.06),
-                    transparent 25%
-                ),
-                linear-gradient(135deg, #F3FBF9, #E5F7F3) !important;
+        img {
+            max-width: 100%;
         }
 
-        /* ENCABEZADO Y LOGO */
+        a {
+            transition: color .25s ease, background .25s ease,
+                        transform .25s ease, box-shadow .25s ease;
+        }
+
+        main {
+            display: block;
+            width: 100%;
+        }
+
+        /* ENCABEZADO */
+
+        .header-area {
+            position: relative;
+            z-index: 1000;
+        }
 
         .header-area .main-header {
-            background: rgba(247, 255, 253, 0.97) !important;
-            box-shadow: 0 5px 25px rgba(18, 63, 74, 0.10) !important;
+            background: rgba(247, 255, 253, .98) !important;
+            box-shadow: 0 5px 25px rgba(18, 63, 74, .10) !important;
+        }
+
+        .header-area .main-header .container-fluid {
+            padding-left: 4%;
+            padding-right: 4%;
         }
 
         .logo-text {
+            display: inline-flex !important;
+            align-items: center;
+            gap: 8px;
             color: var(--deep) !important;
             font-size: 25px !important;
             font-weight: 800 !important;
-            letter-spacing: -0.5px;
+            letter-spacing: -.5px;
             text-decoration: none !important;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
+            white-space: nowrap;
         }
 
         .logo-text span,
@@ -96,10 +102,15 @@
             color: var(--mint) !important;
         }
 
+        #navigation {
+            margin: 0;
+            padding: 0;
+        }
+
         #navigation li a {
             color: #164E4A !important;
             font-weight: 600 !important;
-            transition: color 0.25s ease;
+            font-size: 14px;
         }
 
         #navigation li a:hover {
@@ -109,63 +120,59 @@
         /* BOTÓN DE EMERGENCIAS */
 
         .header-btn {
-            background: linear-gradient(
-                135deg,
-                var(--deep),
-                #167D70
-            ) !important;
-            color: #FFFFFF !important;
-            border-radius: 30px !important;
-            padding: 12px 24px !important;
             display: inline-flex !important;
-            align-items: center !important;
-            justify-content: center !important;
-            gap: 8px !important;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 20px !important;
+            border-radius: 30px !important;
+            background: linear-gradient(135deg, var(--deep), #167D70) !important;
+            color: var(--white) !important;
             font-weight: 700 !important;
-            white-space: nowrap !important;
-            box-shadow: 0 7px 18px rgba(18, 63, 74, 0.20) !important;
-            transition: all 0.3s ease !important;
+            white-space: nowrap;
+            box-shadow: 0 7px 18px rgba(18, 63, 74, .20) !important;
+            text-decoration: none !important;
         }
 
         .header-btn:hover {
-            background: linear-gradient(
-                135deg,
-                var(--mint),
-                var(--teal)
-            ) !important;
-            color: #FFFFFF !important;
+            background: linear-gradient(135deg, var(--mint), var(--teal)) !important;
+            color: var(--white) !important;
             transform: translateY(-2px);
         }
 
-        /* PORTADA PRINCIPAL */
+        /* PORTADA */
 
-        .slider-bg-services {
-            min-height: 360px !important;
+        .slider-area2.slider-bg-services {
             position: relative;
+            isolation: isolate;
+            display: flex;
+            align-items: center;
+            min-height: 380px !important;
             overflow: hidden;
 
+            background-color: #176B60 !important;
             background-image:
                 linear-gradient(
                     115deg,
-                    rgba(10, 55, 61, 0.82),
-                    rgba(22, 160, 133, 0.58)
+                    rgba(10, 55, 61, .78),
+                    rgba(22, 160, 133, .48)
                 ),
-                url(https://img.sanishtech.com/u/3194d455ac18d09fe00c5d3fa5eb3975.jpg) !important;
+                url("https://img.sanishtech.com/u/3194d455ac18d09fe00c5d3fa5eb3975.jpg") !important;
 
+            background-repeat: no-repeat !important;
+            background-position: center center !important;
             background-size: cover !important;
-            background-position: center 45% !important;
         }
 
         .slider-bg-services::after {
             content: "";
             position: absolute;
             inset: 0;
-            pointer-events: none;
-
+            z-index: -1;
             background: linear-gradient(
                 0deg,
-                rgba(10, 45, 51, 0.35),
-                transparent 70%
+                rgba(10, 45, 51, .30),
+                transparent 75%
             );
         }
 
@@ -174,47 +181,84 @@
             z-index: 1;
         }
 
+        .slider-bg-services .hero-cap {
+            padding-top: 25px !important;
+            padding-bottom: 25px !important;
+        }
+
         .hero-cap h2 {
+            margin: 0;
             color: #FFFFFF !important;
-            font-size: clamp(34px, 5vw, 52px) !important;
+            font-size: clamp(34px, 5vw, 54px) !important;
             font-weight: 800 !important;
-            text-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
+            line-height: 1.2;
             letter-spacing: -1px;
+            text-shadow: 0 4px 18px rgba(0, 0, 0, .3);
         }
 
         /* SECCIÓN DE SERVICIOS */
 
         .our-services {
             position: relative;
-            padding-top: 85px !important;
-            padding-bottom: 85px !important;
+            padding: 85px 0 !important;
+            background:
+                radial-gradient(
+                    circle at 10% 20%,
+                    rgba(26, 188, 156, .08),
+                    transparent 25%
+                ),
+                radial-gradient(
+                    circle at 90% 70%,
+                    rgba(18, 63, 74, .05),
+                    transparent 25%
+                ),
+                linear-gradient(135deg, #F3FBF9, #E5F7F3) !important;
         }
 
-        .section-tittle span {
+        .section-tittle {
+            margin-bottom: 55px !important;
+        }
+
+        .section-tittle > span {
             display: inline-block;
-            color: #0E7856 !important;
-            background: #D6F5EC !important;
-            border: 1px solid #B6E9DB;
             padding: 9px 18px !important;
+            border: 1px solid #B6E9DB;
             border-radius: 50px !important;
-            font-size: 13px;
+            background: #D6F5EC !important;
+            color: #0E7856 !important;
+            font-size: 12px;
+            font-weight: 800;
             letter-spacing: 1px;
             text-transform: uppercase;
-            font-weight: 700;
         }
 
         .section-tittle h2 {
-            color: var(--deep) !important;
-            font-weight: 800 !important;
-            line-height: 1.25;
             margin-top: 18px;
+            color: var(--deep) !important;
+            font-size: clamp(28px, 4vw, 38px) !important;
+            font-weight: 800 !important;
+            line-height: 1.3;
         }
 
         /* TARJETAS */
 
+        .services-grid > [class*="col-"] {
+            display: flex;
+            margin-bottom: 30px;
+        }
+
         .single-services {
             position: relative;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            min-width: 0;
+            padding: 18px 18px 26px !important;
             overflow: hidden;
+
+            border: 1px solid rgba(26, 188, 156, .24) !important;
+            border-radius: 22px !important;
 
             background: linear-gradient(
                 150deg,
@@ -222,17 +266,12 @@
                 #F0FBF8 100%
             ) !important;
 
-            border: 1px solid rgba(26, 188, 156, 0.24) !important;
-            border-radius: 22px !important;
-            padding: 20px 20px 28px !important;
-
-            box-shadow: 0 10px 30px rgba(18, 63, 74, 0.07) !important;
+            box-shadow: 0 10px 30px rgba(18, 63, 74, .07) !important;
 
             transition:
-                transform 0.3s ease,
-                box-shadow 0.3s ease !important;
-
-            height: 100%;
+                transform .3s ease,
+                box-shadow .3s ease,
+                border-color .3s ease !important;
         }
 
         .single-services::before {
@@ -242,69 +281,104 @@
             left: 0;
             width: 100%;
             height: 5px;
-
             background: linear-gradient(
                 90deg,
                 var(--mint),
                 #167D70,
                 #B6E9DB
             );
+            z-index: 2;
         }
 
         .single-services:hover {
-            transform: translateY(-8px) !important;
-
-            box-shadow: 0 18px 38px rgba(18, 63, 74, 0.15) !important;
-
-            border-color: rgba(26, 188, 156, 0.55) !important;
+            transform: translateY(-7px) !important;
+            box-shadow: 0 18px 38px rgba(18, 63, 74, .13) !important;
+            border-color: rgba(26, 188, 156, .55) !important;
         }
 
-        /* IMÁGENES */
+        /* IMÁGENES CORREGIDAS */
 
         .services-img {
-            width: 100%;
-            height: 205px !important;
-            overflow: hidden;
-            border-radius: 16px !important;
-            margin-bottom: 22px !important;
-            background: #D6F5EC;
+            position: relative;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+
+            width: 100% !important;
+            height: auto !important;
+            min-height: 0 !important;
+            aspect-ratio: 16 / 10;
+
+            margin: 0 0 22px !important;
+            padding: 8px !important;
+            overflow: hidden !important;
+
+            border-radius: 15px !important;
+            background: #E8F8F5 !important;
+            border: 1px solid rgba(26, 188, 156, .13);
         }
 
         .services-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
+            display: block !important;
+
+            position: relative !important;
+            width: 100% !important;
+            height: 100% !important;
+            max-width: 100% !important;
+            max-height: 100% !important;
+
+            /* Muestra la imagen completa sin cortar sus bordes */
+            object-fit: contain !important;
+            object-position: center center !important;
+
+            margin: 0 auto !important;
+            padding: 0 !important;
+
+            border: 0 !important;
+            border-radius: 10px !important;
+            background: transparent !important;
+
+            transform: none;
+            transition: transform .35s ease;
         }
 
         .single-services:hover .services-img img {
-            transform: scale(1.055);
+            transform: scale(1.025);
         }
 
         /* ICONOS */
 
-        .services-ion span {
-            color: var(--teal) !important;
-            font-size: 42px !important;
-            margin-bottom: 15px;
-            display: inline-block;
-
-            filter: drop-shadow(
-                0 4px 7px rgba(26, 188, 156, 0.16)
-            );
+        .services-ion {
+            flex-shrink: 0;
+            margin: 0 0 10px;
         }
 
-        /* TEXTOS DE LAS TARJETAS */
+        .services-ion span {
+            display: inline-block;
+            margin: 0;
+            color: var(--teal) !important;
+            font-size: 36px !important;
+            filter: drop-shadow(0 4px 7px rgba(26, 188, 156, .16));
+        }
+
+        /* TEXTOS */
+
+        .services-cap {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
 
         .services-cap h5 {
-            margin-bottom: 12px;
+            margin: 0 0 12px !important;
+            line-height: 1.4;
         }
 
         .services-cap h5 a {
             color: var(--deep) !important;
-            font-size: 20px !important;
+            font-size: 19px !important;
             font-weight: 800 !important;
-            text-decoration: none;
+            text-decoration: none !important;
         }
 
         .services-cap h5 a:hover {
@@ -312,13 +386,10 @@
         }
 
         .services-cap p {
+            margin: 0 !important;
             color: #526B6D !important;
             font-size: 14px !important;
             line-height: 1.8 !important;
-        }
-
-        .our-services .mb-30 {
-            margin-bottom: 30px !important;
         }
 
         /* BANNER DE EMERGENCIAS */
@@ -326,50 +397,65 @@
         .contact-animal-owner {
             position: relative;
             overflow: hidden;
-            padding: 50px 0 !important;
+            padding: 40px 0 !important;
 
-            background:
+            background-color: #104B49 !important;
+            background-image:
                 linear-gradient(
                     115deg,
-                    rgba(10, 49, 58, 0.94),
-                    rgba(14, 120, 86, 0.87)
+                    rgba(10, 49, 58, .94),
+                    rgba(14, 120, 86, .87)
                 ),
-                url('https://images.unsplash.com/photo-1576201836106-db1758fd1c97?q=80&w=1200&auto=format&fit=crop')
-                center / cover no-repeat !important;
+                url("https://images.unsplash.com/photo-1576201836106-db1758fd1c97?q=80&w=1200&auto=format&fit=crop") !important;
+
+            background-position: center center !important;
+            background-repeat: no-repeat !important;
+            background-size: cover !important;
         }
 
         .contact-animal-owner .contact_text {
-            padding: 55px 25px !important;
+            padding: 45px 20px !important;
         }
 
         .contact-animal-owner h3 {
+            margin-bottom: 18px;
             color: #FFFFFF !important;
             font-size: clamp(26px, 4vw, 38px) !important;
             font-weight: 800 !important;
+            line-height: 1.3;
         }
 
         .contact-animal-owner p {
             color: #DDF8F0 !important;
-            font-size: 16px;
-            line-height: 1.8;
+            font-size: 16px !important;
+            line-height: 1.8 !important;
         }
 
         .contact-animal-owner .btn,
-        .hero-btn {
+        .contact-animal-owner .hero-btn {
+            display: inline-flex !important;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+
+            min-height: 48px;
+            margin: 7px !important;
+            padding: 13px 23px !important;
+
+            border: 1px solid var(--mint) !important;
             border-radius: 50px !important;
-            padding: 14px 25px !important;
-            font-weight: 700 !important;
 
             background: var(--mint) !important;
-            border: 1px solid var(--mint) !important;
             color: #FFFFFF !important;
+            font-size: 14px;
+            font-weight: 800 !important;
+            text-decoration: none !important;
 
-            box-shadow: 0 6px 18px rgba(26, 188, 156, 0.2) !important;
-            transition: all 0.3s ease !important;
+            box-shadow: 0 6px 18px rgba(26, 188, 156, .2) !important;
         }
 
         .contact-animal-owner .btn:hover,
-        .hero-btn:hover {
+        .contact-animal-owner .hero-btn:hover {
             background: var(--dark) !important;
             border-color: var(--dark) !important;
             color: #FFFFFF !important;
@@ -379,13 +465,12 @@
         /* PIE DE PÁGINA */
 
         .footer-area {
+            position: relative;
             background: linear-gradient(
                 135deg,
                 var(--deep),
                 var(--dark)
             ) !important;
-
-            position: relative;
         }
 
         .footer-area,
@@ -393,6 +478,10 @@
         .footer-area li,
         .footer-area li a {
             color: #D8F1EA !important;
+        }
+
+        .footer-area .logo-text {
+            color: #FFFFFF !important;
         }
 
         .footer-tittle h4 {
@@ -408,22 +497,27 @@
             ) !important;
         }
 
+        .footer-area li {
+            line-height: 1.9;
+            overflow-wrap: anywhere;
+        }
+
         .footer-area a:hover {
             color: #58E0C0 !important;
         }
 
         .footer-social a {
-            display: inline-flex;
+            display: inline-flex !important;
             align-items: center;
             justify-content: center;
 
-            width: 38px;
-            height: 38px;
+            width: 40px;
+            height: 40px;
             margin-right: 6px;
-            border-radius: 50%;
 
-            background: rgba(255, 255, 255, 0.10);
-            transition: all 0.25s ease;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, .10);
+            color: #FFFFFF !important;
         }
 
         .footer-social a:hover {
@@ -438,108 +532,167 @@
 
         .footer-copy-right p {
             color: #C6E5DE !important;
+            line-height: 1.8;
         }
 
-        /* BOTÓN FLOTANTE DE WHATSAPP */
+        /* WHATSAPP FLOTANTE */
 
         .whatsapp-float {
-            position: fixed;
-            width: 58px !important;
-            height: 58px !important;
-            bottom: 24px !important;
-            right: 24px !important;
+            position: fixed !important;
+            right: 22px !important;
+            bottom: 22px !important;
+            z-index: 9999 !important;
 
-            background: linear-gradient(
-                135deg,
-                #25D366,
-                #128C7E
-            ) !important;
-
-            color: #FFFFFF !important;
-            border-radius: 50% !important;
-            text-align: center;
-            font-size: 30px;
-
-            box-shadow: 0 8px 25px rgba(18, 140, 126, 0.35) !important;
-
-            z-index: 9999;
-            display: flex;
+            display: flex !important;
             align-items: center;
             justify-content: center;
 
-            text-decoration: none;
-            transition: transform 0.25s ease;
+            width: 58px !important;
+            height: 58px !important;
+
+            border-radius: 50% !important;
+            background: linear-gradient(135deg, #25D366, #128C7E) !important;
+            color: #FFFFFF !important;
+            font-size: 30px !important;
+            text-decoration: none !important;
+
+            box-shadow: 0 8px 25px rgba(18, 140, 126, .35) !important;
         }
 
         .whatsapp-float:hover {
-            transform: scale(1.08);
             color: #FFFFFF !important;
+            transform: scale(1.08);
         }
 
         #back-top a {
             background: var(--teal) !important;
         }
 
+        /* PRELOADER: EVITA QUE LA PÁGINA QUEDE BLOQUEADA */
+
+        #preloader-active {
+            transition: opacity .3s ease, visibility .3s ease;
+        }
+
+        body.page-loaded #preloader-active {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
         /* TABLET */
 
         @media (max-width: 991px) {
             .header-area .main-header {
-                background: rgba(247, 255, 253, 0.98) !important;
+                background: rgba(247, 255, 253, .99) !important;
+            }
+
+            .header-area .main-header .container-fluid {
+                padding-left: 18px;
+                padding-right: 18px;
+            }
+
+            .slider-area2.slider-bg-services {
+                min-height: 320px !important;
             }
 
             .our-services {
-                padding-top: 60px !important;
-                padding-bottom: 60px !important;
+                padding: 65px 0 !important;
+            }
+
+            .services-img {
+                aspect-ratio: 4 / 3;
+            }
+
+            .services-cap h5 a {
+                font-size: 18px !important;
             }
         }
 
         /* CELULARES */
 
         @media (max-width: 767px) {
-            .slider-bg-services {
-                min-height: 280px !important;
+            .logo-text {
+                font-size: 23px !important;
+            }
+
+            .slider-area2.slider-bg-services {
+                min-height: 265px !important;
+                background-position: center center !important;
             }
 
             .hero-cap h2 {
                 font-size: 34px !important;
+                letter-spacing: -.5px;
             }
 
             .our-services {
-                padding-top: 55px !important;
-                padding-bottom: 55px !important;
+                padding: 50px 0 !important;
+            }
+
+            .section-tittle {
+                margin-bottom: 35px !important;
             }
 
             .section-tittle h2 {
-                font-size: 28px !important;
+                font-size: 27px !important;
+            }
+
+            .services-grid > [class*="col-"] {
+                margin-bottom: 22px;
+            }
+
+            .single-services {
+                padding: 15px 15px 23px !important;
+                border-radius: 18px !important;
             }
 
             .services-img {
-                height: 215px !important;
+                aspect-ratio: 16 / 10;
+                padding: 7px !important;
+                margin-bottom: 17px !important;
+            }
+
+            .services-cap h5 a {
+                font-size: 19px !important;
             }
 
             .contact-animal-owner .contact_text {
-                padding: 35px 15px !important;
+                padding: 30px 8px !important;
             }
 
-            .contact-animal-owner .btn {
-                margin: 7px !important;
+            .contact-animal-owner .btn,
+            .contact-animal-owner .hero-btn {
+                width: 100%;
+                max-width: 290px;
+                margin: 6px auto !important;
+            }
+
+            .footer-area .single-footer-caption {
+                margin-bottom: 30px !important;
             }
 
             .whatsapp-float {
                 width: 54px !important;
                 height: 54px !important;
-                right: 16px !important;
-                bottom: 16px !important;
+                right: 15px !important;
+                bottom: 15px !important;
+                font-size: 27px !important;
             }
         }
 
+        /* REDUCE MOVIMIENTO SI EL DISPOSITIVO LO SOLICITA */
+
         @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
             *,
             *::before,
             *::after {
-                scroll-behavior: auto !important;
-                transition-duration: 0.01ms !important;
-                animation-duration: 0.01ms !important;
+                animation-duration: .01ms !important;
+                transition-duration: .01ms !important;
             }
         }
     </style>
@@ -568,7 +721,7 @@
                 <div class="container-fluid">
                     <div class="row align-items-center">
 
-                        <div class="col-xl-3 col-lg-3 col-md-2">
+                        <div class="col-xl-3 col-lg-3 col-md-4 col-8">
                             <div class="logo">
                                 <a href="index.html"
                                    class="logo-text"
@@ -579,7 +732,7 @@
                             </div>
                         </div>
 
-                        <div class="col-xl-9 col-lg-9 col-md-10">
+                        <div class="col-xl-9 col-lg-9 col-md-8 col-4">
                             <div class="menu-main d-flex align-items-center justify-content-end">
 
                                 <div class="main-menu f-right d-none d-lg-block">
@@ -620,39 +773,43 @@
     <main>
 
         <!-- PORTADA -->
-        <div class="slider-area2 slider-height2 slider-bg-services d-flex align-items-center">
+        <section class="slider-area2 slider-bg-services">
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-12">
-                        <div class="hero-cap text-center pt-50">
+                    <div class="col-12">
+                        <div class="hero-cap text-center">
                             <h2>Servicios Médicos</h2>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
         <!-- SERVICIOS -->
-        <section class="our-services section-padding30">
+        <section class="our-services">
             <div class="container">
 
-                <div class="row justify-content-sm-center">
-                    <div class="col-xl-7 col-lg-8 col-md-10">
-                        <div class="section-tittle text-center mb-70">
+                <div class="row justify-content-center">
+                    <div class="col-xl-8 col-lg-9 col-md-10">
+                        <div class="section-tittle text-center">
                             <span>Atención Especializada</span>
                             <h2>Servicios para el Bienestar de tu Mascota</h2>
                         </div>
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row services-grid">
 
                     <!-- SERVICIO 1 -->
-                    <div class="col-lg-4 col-md-6 col-sm-6 mb-30">
-                        <div class="single-services text-center">
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <article class="single-services text-center">
+
                             <div class="services-img">
-                                <img src="https://img.sanishtech.com/u/ef8246b88adb8ff03c22d98ff84703fe.jpg"
-                                     alt="Consulta veterinaria">
+                                <img
+                                    src="https://img.sanishtech.com/u/ef8246b88adb8ff03c22d98ff84703fe.jpg"
+                                    alt="Consulta veterinaria"
+                                    loading="lazy"
+                                    decoding="async">
                             </div>
 
                             <div class="services-ion">
@@ -667,15 +824,20 @@
                                     afección a tiempo.
                                 </p>
                             </div>
-                        </div>
+
+                        </article>
                     </div>
 
                     <!-- SERVICIO 2 -->
-                    <div class="col-lg-4 col-md-6 col-sm-6 mb-30">
-                        <div class="single-services text-center">
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <article class="single-services text-center">
+
                             <div class="services-img">
-                                <img src="https://img.sanishtech.com/u/3194d455ac18d09fe00c5d3fa5eb3975.jpg"
-                                     alt="Vacunación de mascotas">
+                                <img
+                                    src="https://img.sanishtech.com/u/3194d455ac18d09fe00c5d3fa5eb3975.jpg"
+                                    alt="Vacunación de mascotas"
+                                    loading="lazy"
+                                    decoding="async">
                             </div>
 
                             <div class="services-ion">
@@ -689,15 +851,20 @@
                                     y adultos, garantizando protección preventiva integral.
                                 </p>
                             </div>
-                        </div>
+
+                        </article>
                     </div>
 
                     <!-- SERVICIO 3 -->
-                    <div class="col-lg-4 col-md-6 col-sm-6 mb-30">
-                        <div class="single-services text-center">
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <article class="single-services text-center">
+
                             <div class="services-img">
-                                <img src="https://img.sanishtech.com/u/658df3bd5ceadbc155c6abedbfd31fe1.jpg"
-                                     alt="Cirugía veterinaria">
+                                <img
+                                    src="https://img.sanishtech.com/u/658df3bd5ceadbc155c6abedbfd31fe1.jpg"
+                                    alt="Cirugía veterinaria"
+                                    loading="lazy"
+                                    decoding="async">
                             </div>
 
                             <div class="services-ion">
@@ -711,15 +878,20 @@
                                     intervenciones preventivas y cirugías de mayor complejidad.
                                 </p>
                             </div>
-                        </div>
+
+                        </article>
                     </div>
 
                     <!-- SERVICIO 4 -->
-                    <div class="col-lg-4 col-md-6 col-sm-6 mb-30">
-                        <div class="single-services text-center">
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <article class="single-services text-center">
+
                             <div class="services-img">
-                                <img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?q=80&w=800&auto=format&fit=crop"
-                                     alt="Grooming canino">
+                                <img
+                                    src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?q=80&w=800&auto=format&fit=crop"
+                                    alt="Grooming canino"
+                                    loading="lazy"
+                                    decoding="async">
                             </div>
 
                             <div class="services-ion">
@@ -733,15 +905,20 @@
                                     limpieza de oídos y cuidado dermatológico integral.
                                 </p>
                             </div>
-                        </div>
+
+                        </article>
                     </div>
 
                     <!-- SERVICIO 5 -->
-                    <div class="col-lg-4 col-md-6 col-sm-6 mb-30">
-                        <div class="single-services text-center">
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <article class="single-services text-center">
+
                             <div class="services-img">
-                                <img src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?q=80&w=800&auto=format&fit=crop"
-                                     alt="Hospitalización veterinaria">
+                                <img
+                                    src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?q=80&w=800&auto=format&fit=crop"
+                                    alt="Hospitalización veterinaria"
+                                    loading="lazy"
+                                    decoding="async">
                             </div>
 
                             <div class="services-ion">
@@ -755,15 +932,20 @@
                                     continua para pacientes en recuperación o tratamiento.
                                 </p>
                             </div>
-                        </div>
+
+                        </article>
                     </div>
 
                     <!-- SERVICIO 6 -->
-                    <div class="col-lg-4 col-md-6 col-sm-6 mb-30">
-                        <div class="single-services text-center">
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <article class="single-services text-center">
+
                             <div class="services-img">
-                                <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?q=80&w=800&auto=format&fit=crop"
-                                     alt="Laboratorio clínico veterinario">
+                                <img
+                                    src="https://images.unsplash.com/photo-1579154204601-01588f351e67?q=80&w=800&auto=format&fit=crop"
+                                    alt="Laboratorio clínico veterinario"
+                                    loading="lazy"
+                                    decoding="async">
                             </div>
 
                             <div class="services-ion">
@@ -777,7 +959,8 @@
                                     rápidas para entregas de resultados el mismo día.
                                 </p>
                             </div>
-                        </div>
+
+                        </article>
                     </div>
 
                 </div>
@@ -785,28 +968,27 @@
         </section>
 
         <!-- BANNER DE EMERGENCIAS -->
-        <section class="contact-animal-owner section-bg">
+        <section class="contact-animal-owner">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-lg-8">
+                    <div class="col-lg-9">
                         <div class="contact_text text-center">
 
-                            <div class="section_title text-center">
-                                <h3>¡Atención Médica de Emergencia!</h3>
-                                <p class="mb-4">
-                                    Sabemos que los imprevistos ocurren en cualquier momento.
-                                    Nuestro equipo está listo para atender emergencias
-                                    las 24 horas.
-                                </p>
-                            </div>
+                            <h3>¡Atención Médica de Emergencia!</h3>
 
-                            <div class="contact_btn d-flex align-items-center justify-content-center flex-wrap">
+                            <p class="mb-4">
+                                Sabemos que los imprevistos ocurren en cualquier momento.
+                                Nuestro equipo está listo para atender emergencias
+                                las 24 horas.
+                            </p>
+
+                            <div class="d-flex align-items-center justify-content-center flex-wrap">
                                 <a href="contact.html" class="btn">
                                     Contactar Ahora
                                 </a>
 
-                                <a href="tel:+50493289376" class="btn hero-btn ml-3">
-                                    <i class="fas fa-phone mr-2"></i>
+                                <a href="tel:+50493289376" class="btn hero-btn">
+                                    <i class="fas fa-phone"></i>
                                     +504 9328-9376
                                 </a>
                             </div>
@@ -824,15 +1006,15 @@
 
         <div class="footer-area footer-padding">
             <div class="container">
-                <div class="row d-flex justify-content-between">
+                <div class="row">
 
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
+                    <!-- INFORMACIÓN -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                         <div class="single-footer-caption mb-50">
 
                             <div class="footer-logo mb-25">
                                 <a href="index.html"
                                    class="logo-text"
-                                   style="color:#FFFFFF;"
                                    aria-label="Veterinaria Silv, ir al inicio">
                                     <i class="fas fa-paw"></i>
                                     Vet<span>Silv</span>
@@ -849,18 +1031,23 @@
                             </div>
 
                             <div class="footer-social">
-                                <a href="#" aria-label="Facebook">
+                                <a href="#"
+                                   aria-label="Facebook"
+                                   title="Facebook">
                                     <i class="fab fa-facebook-f"></i>
                                 </a>
 
-                                <a href="#" aria-label="Instagram">
+                                <a href="#"
+                                   aria-label="Instagram"
+                                   title="Instagram">
                                     <i class="fab fa-instagram"></i>
                                 </a>
 
                                 <a href="https://wa.me/50493289376"
                                    target="_blank"
                                    rel="noopener noreferrer"
-                                   aria-label="WhatsApp">
+                                   aria-label="WhatsApp"
+                                   title="WhatsApp">
                                     <i class="fab fa-whatsapp"></i>
                                 </a>
                             </div>
@@ -868,9 +1055,11 @@
                         </div>
                     </div>
 
-                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                    <!-- CONTACTO -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                         <div class="single-footer-caption mb-50">
                             <div class="footer-tittle">
+
                                 <h4>Contacto Veterinaria Silv</h4>
 
                                 <ul>
@@ -892,21 +1081,44 @@
                                         </a>
                                     </li>
                                 </ul>
+
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                    <!-- SERVICIOS PRINCIPALES -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                         <div class="single-footer-caption mb-50">
                             <div class="footer-tittle">
+
                                 <h4>Servicios Principales</h4>
 
                                 <ul>
-                                    <li><a href="services.html">Consulta General y Especialidades</a></li>
-                                    <li><a href="services.html">Vacunación y Desparasitación</a></li>
-                                    <li><a href="services.html">Cirugías y Hospitalización</a></li>
-                                    <li><a href="services.html">Grooming &amp; Estética</a></li>
+                                    <li>
+                                        <a href="services.html">
+                                            Consulta General y Especialidades
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="services.html">
+                                            Vacunación y Desparasitación
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="services.html">
+                                            Cirugías y Hospitalización
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="services.html">
+                                            Grooming y Estética
+                                        </a>
+                                    </li>
                                 </ul>
+
                             </div>
                         </div>
                     </div>
@@ -915,17 +1127,16 @@
             </div>
         </div>
 
+        <!-- DERECHOS RESERVADOS -->
         <div class="footer-bottom-area">
             <div class="container">
                 <div class="footer-border">
-                    <div class="row d-flex align-items-center">
-                        <div class="col-xl-12">
+                    <div class="row">
+                        <div class="col-12">
                             <div class="footer-copy-right text-center">
                                 <p>
                                     Todos los derechos reservados &copy;
-                                    <script>
-                                        document.write(new Date().getFullYear());
-                                    </script>
+                                    <span id="current-year"></span>
                                     | Veterinaria Silv
                                 </p>
                             </div>
@@ -942,37 +1153,88 @@
        class="whatsapp-float"
        target="_blank"
        rel="noopener noreferrer"
-       aria-label="Contacto por WhatsApp">
+       aria-label="Contactar por WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <!-- BOTÓN PARA SUBIR -->
     <div id="back-top">
-        <a title="Ir arriba" href="#">
+        <a title="Ir arriba" href="#" aria-label="Ir arriba">
             <i class="fas fa-level-up-alt"></i>
         </a>
     </div>
 
-    <!-- JAVASCRIPT DEL SITIO -->
-    <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
-    <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
-    <script src="./assets/js/popper.min.js"></script>
-    <script src="./assets/js/bootstrap.min.js"></script>
-    <script src="./assets/js/jquery.slicknav.min.js"></script>
-    <script src="./assets/js/owl.carousel.min.js"></script>
-    <script src="./assets/js/slick.min.js"></script>
-    <script src="./assets/js/wow.min.js"></script>
-    <script src="./assets/js/animated.headline.js"></script>
-    <script src="./assets/js/jquery.magnific-popup.js"></script>
-    <script src="./assets/js/jquery.nice-select.min.js"></script>
-    <script src="./assets/js/jquery.sticky.js"></script>
-    <script src="./assets/js/contact.js"></script>
-    <script src="./assets/js/jquery.form.js"></script>
-    <script src="./assets/js/jquery.validate.min.js"></script>
-    <script src="./assets/js/mail-script.js"></script>
-    <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
-    <script src="./assets/js/plugins.js"></script>
-    <script src="./assets/js/main.js"></script>
+    <!-- JAVASCRIPT ORIGINAL -->
+    <script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.slicknav.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/animated.headline.js"></script>
+    <script src="assets/js/jquery.magnific-popup.js"></script>
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/jquery.sticky.js"></script>
+    <script src="assets/js/contact.js"></script>
+    <script src="assets/js/jquery.form.js"></script>
+    <script src="assets/js/jquery.validate.min.js"></script>
+    <script src="assets/js/mail-script.js"></script>
+    <script src="assets/js/jquery.ajaxchimp.min.js"></script>
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- AJUSTES DE FUNCIONAMIENTO -->
+    <script>
+        (function () {
+            // Ocultar el preloader aunque falle algún archivo de la plantilla.
+            function ocultarPreloader() {
+                document.body.classList.add("page-loaded");
+            }
+
+            if (document.readyState === "complete") {
+                ocultarPreloader();
+            } else {
+                window.addEventListener("load", ocultarPreloader, { once: true });
+            }
+
+            // Año automático del pie de página.
+            var yearElement = document.getElementById("current-year");
+
+            if (yearElement) {
+                yearElement.textContent = new Date().getFullYear();
+            }
+
+            // Evitar que el botón de subir cambie a una URL con #.
+            var backTop = document.querySelector("#back-top a");
+
+            if (backTop) {
+                backTop.addEventListener("click", function (event) {
+                    event.preventDefault();
+
+                    window.scrollTo({
+                        top: 0,
+                        behavior: "smooth"
+                    });
+                });
+            }
+
+            // Mostrar un fondo agradable si una imagen externa no carga.
+            document.querySelectorAll(".services-img img").forEach(function (img) {
+                img.addEventListener("error", function () {
+                    img.style.display = "none";
+
+                    var container = img.closest(".services-img");
+
+                    if (container) {
+                        container.style.background =
+                            "linear-gradient(135deg, #E8F8F5, #D6F5EC)";
+                    }
+                });
+            });
+        })();
+    </script>
 
 </body>
 </html>
