@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Conoce la historia, misión, visión y equipo médico de Veterinaria Silv. Cuidado integral y atención con amor para tus mascotas.">
 <meta name="theme-color" content="#1abc9c">
+
 <title>Nosotros | Veterinaria Silv</title>
 
 <link rel="shortcut icon" href="assets/img/favicon.ico">
@@ -36,12 +37,7 @@ html {
 
 body {
     margin: 0;
-    background: linear-gradient(
-        180deg,
-        var(--light),
-        #f0f8fc 52%,
-        var(--soft)
-    ) !important;
+    background: linear-gradient(180deg, var(--light), #f0f8fc 52%, var(--soft)) !important;
     color: var(--deep) !important;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow-x: hidden;
@@ -61,7 +57,9 @@ p {
     line-height: 1.8;
 }
 
-/* ENCABEZADO */
+/* =========================
+   ENCABEZADO CORREGIDO
+========================= */
 
 .header-area {
     background: rgba(248,255,253,.98) !important;
@@ -99,29 +97,29 @@ p {
     color: var(--mint) !important;
 }
 
-.main-menu ul li a {
+/* Enlaces del menú de computadora */
+.main-header nav[aria-label="Navegación principal"] a:not(.header-btn) {
     color: var(--deep) !important;
     font-weight: 700;
     font-size: 13px;
-    letter-spacing: .25px;
-    padding: 12px 10px !important;
+    letter-spacing: .1px;
+    padding: 12px 9px !important;
+    white-space: nowrap;
 }
 
-.main-menu ul li a:hover {
+.main-header nav[aria-label="Navegación principal"] a:hover,
+#mobileNav a:not(.header-btn):hover {
     color: var(--mint2) !important;
 }
 
+/* Botones */
 .header-btn,
 .btn {
     display: inline-flex !important;
     align-items: center;
     justify-content: center;
     gap: 8px;
-    background: linear-gradient(
-        135deg,
-        var(--mint),
-        var(--mint2)
-    ) !important;
+    background: linear-gradient(135deg, var(--mint), var(--mint2)) !important;
     color: #fff !important;
     border: 0 !important;
     border-radius: 50px !important;
@@ -134,15 +132,87 @@ p {
 .header-btn:hover,
 .btn:hover {
     transform: translateY(-3px);
-    background: linear-gradient(
-        135deg,
-        var(--deep),
-        #176c78
-    ) !important;
+    background: linear-gradient(135deg, var(--deep), #176c78) !important;
     color: #fff !important;
 }
 
-/* PORTADA */
+/* Evitar que se muestren ambos menús */
+#mobileNav {
+    display: none;
+}
+
+.mobile-menu-toggle {
+    display: none !important;
+}
+
+.desktop-navigation {
+    display: flex !important;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 2px;
+}
+
+@media (min-width: 992px) {
+    #mobileNav {
+        display: none !important;
+    }
+
+    .mobile-menu-toggle {
+        display: none !important;
+    }
+
+    .desktop-navigation {
+        display: flex !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .desktop-navigation {
+        display: none !important;
+    }
+
+    .mobile-menu-toggle {
+        display: inline-flex !important;
+    }
+
+    #mobileNav.show {
+        display: block !important;
+    }
+
+    #mobileNav {
+        width: 100%;
+        padding: 12px 0 18px;
+        background: rgba(248,255,253,.98);
+    }
+
+    #mobileNav .mobile-links {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    #mobileNav a:not(.header-btn) {
+        display: block;
+        color: var(--deep) !important;
+        font-size: 14px;
+        font-weight: 700;
+        padding: 12px 14px !important;
+        border-radius: 10px;
+    }
+
+    #mobileNav a:not(.header-btn):hover {
+        background: var(--light);
+    }
+
+    #mobileNav .header-btn {
+        align-self: flex-start;
+        margin-top: 8px;
+    }
+}
+
+/* =========================
+   PORTADA
+========================= */
 
 .hero {
     min-height: 390px;
@@ -151,11 +221,7 @@ p {
     position: relative;
     overflow: hidden;
     background:
-        linear-gradient(
-            115deg,
-            rgba(12,65,76,.86),
-            rgba(22,160,133,.70)
-        ),
+        linear-gradient(115deg, rgba(12,65,76,.86), rgba(22,160,133,.70)),
         url('https://images.unsplash.com/photo-1576201836106-db1758fd1c97?auto=format&fit=crop&w=1800&q=85')
         center / cover no-repeat;
 }
@@ -180,10 +246,12 @@ p {
     text-shadow: 0 5px 24px #0004;
 }
 
-/* SECCIONES */
+/* =========================
+   SECCIONES GENERALES
+========================= */
 
 section {
-    background: transparent;
+    background-color: transparent;
 }
 
 .section-pad {
@@ -193,11 +261,7 @@ section {
 .section-label {
     display: inline-block;
     color: #fff;
-    background: linear-gradient(
-        135deg,
-        var(--mint),
-        var(--mint2)
-    );
+    background: linear-gradient(135deg, var(--mint), var(--mint2));
     padding: 8px 17px;
     border-radius: 50px;
     font-size: 11px;
@@ -214,18 +278,16 @@ section {
     margin: 15px 0 22px;
 }
 
-/* MISIÓN Y VISIÓN */
+/* =========================
+   MISIÓN Y VISIÓN
+========================= */
 
 .mission-card,
 .commitment-card,
 .team-card,
 .blog-card,
 .form-card {
-    background: linear-gradient(
-        145deg,
-        rgba(255,255,255,.97),
-        rgba(225,247,243,.96)
-    );
+    background: linear-gradient(145deg, rgba(255,255,255,.97), rgba(225,247,243,.96));
     border: 1px solid var(--line);
     border-radius: 28px;
     box-shadow: var(--shadow);
@@ -244,12 +306,7 @@ section {
     left: 0;
     width: 100%;
     height: 5px;
-    background: linear-gradient(
-        90deg,
-        var(--mint),
-        #67c8e8,
-        var(--mint2)
-    );
+    background: linear-gradient(90deg, var(--mint), #67c8e8, var(--mint2));
 }
 
 .mission-card h2 {
@@ -269,7 +326,9 @@ section {
     border-top: 1px solid var(--line);
 }
 
-/* COMPROMISO */
+/* =========================
+   COMPROMISO
+========================= */
 
 .commitment-card {
     padding: clamp(20px,4vw,42px);
@@ -279,12 +338,9 @@ section {
 
 .stats-panel {
     height: 100%;
+    min-height: 250px;
     padding: 32px 22px;
-    background: linear-gradient(
-        145deg,
-        #124b58,
-        #168f85
-    );
+    background: linear-gradient(145deg, #124b58, #168f85);
     border-radius: 22px;
     color: #fff;
     text-align: center;
@@ -311,7 +367,9 @@ section {
     margin: 8px 0 0;
 }
 
-/* TARJETAS */
+/* =========================
+   TARJETAS E IMÁGENES
+========================= */
 
 .team-card,
 .blog-card {
@@ -325,21 +383,11 @@ section {
     box-shadow: 0 24px 60px rgba(14,98,81,.18);
 }
 
-/*
-   ESTRUCTURA DE IMÁGENES:
-   Cada imagen ocupa un contenedor con proporción fija.
-   Esto evita que las imágenes deformen las tarjetas.
-*/
-
 .media-frame {
     width: 100%;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(
-        135deg,
-        #d9f3ed,
-        #e5f1f8
-    );
+    background: linear-gradient(135deg, #d9f3ed, #e5f1f8);
     isolation: isolate;
 }
 
@@ -389,16 +437,14 @@ section {
     font-weight: 700;
 }
 
-/* FORMULARIO */
+/* =========================
+   FORMULARIO
+========================= */
 
 .form-section {
     padding: 85px 0;
     background:
-        linear-gradient(
-            110deg,
-            rgba(218,245,241,.9),
-            rgba(222,239,249,.88)
-        ),
+        linear-gradient(110deg, rgba(218,245,241,.9), rgba(222,239,249,.88)),
         url('https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=1600&q=80')
         center / cover no-repeat;
 }
@@ -436,7 +482,9 @@ section {
     background: #fff !important;
 }
 
-/* ARTÍCULOS */
+/* =========================
+   ARTÍCULOS
+========================= */
 
 .blog-content {
     padding: 22px;
@@ -461,16 +509,14 @@ section {
     font-weight: 800;
 }
 
-/* URGENCIAS */
+/* =========================
+   URGENCIAS
+========================= */
 
 .emergency {
     padding: 75px 15px;
     background:
-        linear-gradient(
-            120deg,
-            rgba(12,65,76,.94),
-            rgba(22,160,133,.86)
-        ),
+        linear-gradient(120deg, rgba(12,65,76,.94), rgba(22,160,133,.86)),
         url('https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?auto=format&fit=crop&w=1600&q=80')
         center / cover no-repeat;
     text-align: center;
@@ -490,15 +536,12 @@ section {
     margin: 6px;
 }
 
-/* PIE DE PÁGINA */
+/* =========================
+   PIE DE PÁGINA
+========================= */
 
 .footer-area {
-    background: linear-gradient(
-        135deg,
-        #103f4b,
-        #0e6251,
-        #168f85
-    ) !important;
+    background: linear-gradient(135deg, #103f4b, #0e6251, #168f85) !important;
     padding: 70px 0 35px;
 }
 
@@ -553,7 +596,9 @@ section {
     font-size: 13px;
 }
 
-/* BOTÓN FLOTANTE DE WHATSAPP */
+/* =========================
+   WHATSAPP FLOTANTE
+========================= */
 
 .whatsapp-float {
     position: fixed;
@@ -577,7 +622,9 @@ section {
     transform: translateY(-4px);
 }
 
-/* TABLET */
+/* =========================
+   TABLET Y CELULAR
+========================= */
 
 @media (max-width: 991px) {
     .main-header {
@@ -593,11 +640,9 @@ section {
     }
 
     .header-btn {
-        padding: 11px 14px !important;
+        padding: 11px 16px !important;
     }
 }
-
-/* CELULAR */
 
 @media (max-width: 767px) {
     .logo-text {
@@ -638,8 +683,6 @@ section {
     }
 }
 
-/* RESPETO A LA CONFIGURACIÓN DE MOVIMIENTO DEL DISPOSITIVO */
-
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
@@ -656,12 +699,15 @@ section {
 
 <body>
 
-<!-- ENCABEZADO Y MENÚ -->
+<!-- =========================
+     ENCABEZADO: UN SOLO MENÚ
+========================= -->
 
 <header>
     <div class="header-area">
         <div class="main-header">
             <div class="container">
+
                 <div class="row align-items-center py-3">
 
                     <div class="col-8 col-lg-3">
@@ -671,12 +717,12 @@ section {
                         </a>
                     </div>
 
+                    <!-- Botón exclusivo para móviles -->
                     <div class="col-4 d-lg-none text-right">
                         <button
-                            class="btn"
+                            class="btn mobile-menu-toggle"
                             type="button"
-                            data-toggle="collapse"
-                            data-target="#mobileNav"
+                            id="mobileMenuButton"
                             aria-controls="mobileNav"
                             aria-expanded="false"
                             aria-label="Abrir menú">
@@ -684,34 +730,41 @@ section {
                         </button>
                     </div>
 
+                    <!-- Menú exclusivo para computadoras -->
                     <div class="col-lg-9">
-                        <nav class="d-none d-lg-flex align-items-center justify-content-end" aria-label="Navegación principal">
-                            <a class="px-2" href="index.html">Inicio</a>
-                            <a class="px-2" href="about.html">Nosotros</a>
-                            <a class="px-2" href="services.html">Servicios Médicos</a>
-                            <a class="px-2" href="blog.html">Consejos Mascotas</a>
-                            <a class="px-2" href="contact.html">Contacto y Sedes</a>
+                        <nav class="desktop-navigation"
+                             aria-label="Navegación principal">
+
+                            <a href="index.html">Inicio</a>
+                            <a href="about.html">Nosotros</a>
+                            <a href="services.html">Servicios Médicos</a>
+                            <a href="blog.html">Consejos Mascotas</a>
+                            <a href="contact.html">Contacto y Sedes</a>
 
                             <a href="https://wa.me/50493289376"
                                target="_blank"
                                rel="noopener noreferrer"
-                               class="header-btn ml-3">
+                               class="header-btn ml-2">
                                 <i class="fab fa-whatsapp"></i>
                                 Urgencias 24/7
                             </a>
                         </nav>
                     </div>
 
+                    <!-- Menú exclusivo para móviles -->
                     <div class="col-12">
-                        <nav id="mobileNav" class="collapse d-lg-none pt-3" aria-label="Navegación móvil">
-                            <div class="d-flex flex-column">
-                                <a class="py-2" href="index.html">Inicio</a>
-                                <a class="py-2" href="about.html">Nosotros</a>
-                                <a class="py-2" href="services.html">Servicios Médicos</a>
-                                <a class="py-2" href="blog.html">Consejos Mascotas</a>
-                                <a class="py-2" href="contact.html">Contacto y Sedes</a>
+                        <nav id="mobileNav"
+                             aria-label="Navegación móvil"
+                             aria-hidden="true">
 
-                                <a class="header-btn mt-2"
+                            <div class="mobile-links">
+                                <a href="index.html">Inicio</a>
+                                <a href="about.html">Nosotros</a>
+                                <a href="services.html">Servicios Médicos</a>
+                                <a href="blog.html">Consejos Mascotas</a>
+                                <a href="contact.html">Contacto y Sedes</a>
+
+                                <a class="header-btn"
                                    href="https://wa.me/50493289376"
                                    target="_blank"
                                    rel="noopener noreferrer">
@@ -775,7 +828,6 @@ section {
                         </div>
 
                     </div>
-
                 </div>
             </div>
         </div>
@@ -846,9 +898,7 @@ section {
                         </div>
 
                         <div class="team-caption">
-                            <h3>
-                                <a href="index.html">Dra. María Silv</a>
-                            </h3>
+                            <h3><a href="index.html">Dra. María Silv</a></h3>
                             <span>Directora Médica &amp; Cirugía General</span>
                         </div>
                     </article>
@@ -864,9 +914,7 @@ section {
                         </div>
 
                         <div class="team-caption">
-                            <h3>
-                                <a href="index.html">Dr. Carlos Mendoza</a>
-                            </h3>
+                            <h3><a href="index.html">Dr. Carlos Mendoza</a></h3>
                             <span>Especialista en Medicina Interna</span>
                         </div>
                     </article>
@@ -882,9 +930,7 @@ section {
                         </div>
 
                         <div class="team-caption">
-                            <h3>
-                                <a href="index.html">Dra. Laura Gómez</a>
-                            </h3>
+                            <h3><a href="index.html">Dra. Laura Gómez</a></h3>
                             <span>Medicina Felina &amp; Diagnóstico</span>
                         </div>
                     </article>
@@ -909,25 +955,22 @@ section {
                         </h2>
 
                         <form id="contact-form">
-
                             <div class="row">
 
                                 <div class="col-md-6">
-                                    <input
-                                        type="text"
-                                        name="name"
-                                        placeholder="Tu nombre completo"
-                                        autocomplete="name"
-                                        required>
+                                    <input type="text"
+                                           name="name"
+                                           placeholder="Tu nombre completo"
+                                           autocomplete="name"
+                                           required>
                                 </div>
 
                                 <div class="col-md-6">
-                                    <input
-                                        type="tel"
-                                        name="phone"
-                                        placeholder="Teléfono / WhatsApp"
-                                        autocomplete="tel"
-                                        required>
+                                    <input type="tel"
+                                           name="phone"
+                                           placeholder="Teléfono / WhatsApp"
+                                           autocomplete="tel"
+                                           required>
                                 </div>
 
                                 <div class="col-md-6">
@@ -941,18 +984,16 @@ section {
                                 </div>
 
                                 <div class="col-md-6">
-                                    <input
-                                        type="email"
-                                        name="subject"
-                                        placeholder="Correo electrónico"
-                                        autocomplete="email">
+                                    <input type="email"
+                                           name="subject"
+                                           placeholder="Correo electrónico"
+                                           autocomplete="email">
                                 </div>
 
                                 <div class="col-12">
-                                    <textarea
-                                        name="message"
-                                        placeholder="¿Cómo podemos ayudarte a cuidar de tu mascota?"
-                                        rows="5"></textarea>
+                                    <textarea name="message"
+                                              placeholder="¿Cómo podemos ayudarte a cuidar de tu mascota?"
+                                              rows="5"></textarea>
 
                                     <button class="btn" type="submit">
                                         Enviar mensaje
@@ -962,7 +1003,6 @@ section {
 
                             </div>
                         </form>
-
                     </div>
 
                 </div>
@@ -995,8 +1035,7 @@ section {
                             <span class="blog-category">Nutrición</span>
                             <h3>Claves para una alimentación balanceada en tu perro</h3>
                             <a href="blog_details.html" class="read-more">
-                                Leer más
-                                <i class="ti-arrow-right"></i>
+                                Leer más <i class="ti-arrow-right"></i>
                             </a>
                         </div>
                     </article>
@@ -1015,8 +1054,7 @@ section {
                             <span class="blog-category">Cuidado felino</span>
                             <h3>Cómo detectar a tiempo el estrés en los gatos</h3>
                             <a href="blog_details.html" class="read-more">
-                                Leer más
-                                <i class="ti-arrow-right"></i>
+                                Leer más <i class="ti-arrow-right"></i>
                             </a>
                         </div>
                     </article>
@@ -1035,8 +1073,7 @@ section {
                             <span class="blog-category">Prevención</span>
                             <h3>Importancia del calendario de vacunación anual</h3>
                             <a href="blog_details.html" class="read-more">
-                                Leer más
-                                <i class="ti-arrow-right"></i>
+                                Leer más <i class="ti-arrow-right"></i>
                             </a>
                         </div>
                     </article>
@@ -1050,18 +1087,16 @@ section {
 
     <section class="emergency">
         <div class="container">
-
             <h2>¿Necesitas asistencia inmediata?</h2>
 
             <p class="mb-4">
                 Contáctanos por WhatsApp para consultar sobre la atención que necesita tu mascota.
             </p>
 
-            <a
-                class="btn"
-                href="https://wa.me/50493289376"
-                target="_blank"
-                rel="noopener noreferrer">
+            <a class="btn"
+               href="https://wa.me/50493289376"
+               target="_blank"
+               rel="noopener noreferrer">
                 <i class="fab fa-whatsapp"></i>
                 WhatsApp de urgencias
             </a>
@@ -1070,7 +1105,6 @@ section {
                 <i class="fas fa-phone"></i>
                 +504 9328-9376
             </a>
-
         </div>
     </section>
 
@@ -1102,11 +1136,10 @@ section {
                             <i class="fab fa-instagram"></i>
                         </a>
 
-                        <a
-                            href="https://wa.me/50493289376"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="WhatsApp">
+                        <a href="https://wa.me/50493289376"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="WhatsApp">
                             <i class="fab fa-whatsapp"></i>
                         </a>
                     </div>
@@ -1121,18 +1154,15 @@ section {
                                 <b>Dirección:</b> Santa Cruz de Yojoa, Cortés
                             </a>
                         </li>
-
                         <li>
                             <a href="tel:+50493289376">
                                 <b>Teléfono:</b> +504 9328-9376
                             </a>
                         </li>
-
                         <li>
-                            <a
-                                href="https://wa.me/50493289376"
-                                target="_blank"
-                                rel="noopener noreferrer">
+                            <a href="https://wa.me/50493289376"
+                               target="_blank"
+                               rel="noopener noreferrer">
                                 <b>WhatsApp:</b> 9328-9376
                             </a>
                         </li>
@@ -1167,12 +1197,11 @@ section {
 
 <!-- BOTÓN FLOTANTE DE WHATSAPP -->
 
-<a
-    href="https://wa.me/50493289376"
-    class="whatsapp-float"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Contactar a Veterinaria Silv por WhatsApp">
+<a href="https://wa.me/50493289376"
+   class="whatsapp-float"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Contactar a Veterinaria Silv por WhatsApp">
     <i class="fab fa-whatsapp"></i>
 </a>
 
@@ -1183,8 +1212,56 @@ section {
 <script src="assets/js/bootstrap.min.js"></script>
 
 <script>
+/* Año automático del pie de página */
 document.getElementById("year").textContent = new Date().getFullYear();
 
+/* Menú móvil independiente de Bootstrap */
+(function () {
+    const button = document.getElementById("mobileMenuButton");
+    const menu = document.getElementById("mobileNav");
+
+    if (!button || !menu) return;
+
+    button.addEventListener("click", function () {
+        const isOpen = menu.classList.toggle("show");
+
+        button.setAttribute("aria-expanded", String(isOpen));
+        menu.setAttribute("aria-hidden", String(!isOpen));
+
+        button.setAttribute(
+            "aria-label",
+            isOpen ? "Cerrar menú" : "Abrir menú"
+        );
+
+        button.innerHTML = isOpen
+            ? '<i class="fas fa-times"></i>'
+            : '<i class="fas fa-bars"></i>';
+    });
+
+    /* Cerrar el menú al seleccionar un enlace */
+    menu.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+            menu.classList.remove("show");
+            button.setAttribute("aria-expanded", "false");
+            button.setAttribute("aria-label", "Abrir menú");
+            menu.setAttribute("aria-hidden", "true");
+            button.innerHTML = '<i class="fas fa-bars"></i>';
+        });
+    });
+
+    /* Ocultar el menú móvil al cambiar a pantalla grande */
+    window.addEventListener("resize", function () {
+        if (window.innerWidth >= 992) {
+            menu.classList.remove("show");
+            button.setAttribute("aria-expanded", "false");
+            button.setAttribute("aria-label", "Abrir menú");
+            menu.setAttribute("aria-hidden", "true");
+            button.innerHTML = '<i class="fas fa-bars"></i>';
+        }
+    });
+})();
+
+/* Formulario de contacto por WhatsApp */
 document.getElementById("contact-form").addEventListener("submit", function(e) {
     e.preventDefault();
 
@@ -1208,11 +1285,9 @@ document.getElementById("contact-form").addEventListener("submit", function(e) {
         "📝 Mensaje: " + mensaje
     ].join("\n");
 
-    window.open(
-        "https://wa.me/50493289376?text=" + encodeURIComponent(texto),
-        "_blank",
-        "noopener,noreferrer"
-    );
+    const url = "https://wa.me/50493289376?text=" + encodeURIComponent(texto);
+
+    window.open(url, "_blank", "noopener,noreferrer");
 });
 </script>
 
