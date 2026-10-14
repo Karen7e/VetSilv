@@ -1,0 +1,1421 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Veterinaria Silv | Cuidado Especializado para Perros y Gatos</title>
+
+    <meta name="description" content="Veterinaria Silv en Santa Cruz de Yojoa, Cortés. Consulta veterinaria, vacunación, cirugías, laboratorio, grooming y atención de emergencias.">
+
+    <meta name="theme-color" content="#126B70">
+
+    <!-- ESTILOS ORIGINALES DEL PROYECTO -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/slicknav.css">
+    <link rel="stylesheet" href="assets/css/flaticon.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        /* =========================================
+           VETERINARIA SILV
+           TURQUESA AZULADO + VERDE MENTA
+        ========================================= */
+
+        :root {
+            --mint-primary: #19B7B0;
+            --mint-secondary: #168FAD;
+            --mint-dark: #126B70;
+            --mint-light: #E6F7F7;
+            --mint-soft: #F4FBFC;
+            --mint-pale: #D4F0EF;
+
+            --dark: #173D49;
+            --text: #536B73;
+            --white: #FFFFFF;
+
+            --shadow-sm: 0 8px 25px rgba(18,107,112,.09);
+            --shadow-md: 0 15px 40px rgba(18,107,112,.14);
+            --shadow-lg: 0 25px 60px rgba(18,107,112,.18);
+
+            --radius: 22px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 90px;
+        }
+
+        body {
+            background: var(--mint-light) !important;
+            color: var(--dark) !important;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden;
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:focus-visible,
+        button:focus-visible,
+        input:focus-visible,
+        select:focus-visible,
+        textarea:focus-visible {
+            outline: 3px solid #19B7B0;
+            outline-offset: 4px;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        ::selection {
+            background: var(--mint-primary);
+            color: #FFFFFF;
+        }
+
+        /* =========================================
+           ENCABEZADO
+        ========================================= */
+
+        .header-area {
+            background: rgba(255,255,255,.97) !important;
+            box-shadow: 0 6px 28px rgba(18,107,112,.10) !important;
+            backdrop-filter: blur(15px);
+            position: relative;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(25,183,176,.12);
+        }
+
+        .main-header {
+            min-height: 82px;
+        }
+
+        .logo-text {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            font-size: 25px;
+            font-weight: 900;
+            color: var(--mint-dark) !important;
+            transition: .3s ease;
+            white-space: nowrap;
+        }
+
+        .logo-text i {
+            width: 43px;
+            height: 43px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg,#DDF7F5,#E6F0FF);
+            color: var(--mint-dark);
+            border-radius: 14px;
+            font-size: 21px;
+            box-shadow: 0 5px 15px rgba(25,183,176,.12);
+        }
+
+        .logo-text span {
+            color: var(--mint-primary);
+        }
+
+        .logo-text:hover {
+            transform: translateY(-2px);
+        }
+
+        .main-menu ul li a {
+            color: var(--dark) !important;
+            font-weight: 700;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: .45px;
+            padding: 12px 11px !important;
+            transition: .3s ease;
+        }
+
+        .main-menu ul li a:hover {
+            color: var(--mint-primary) !important;
+        }
+
+        .header-btn {
+            display: inline-flex !important;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 13px 20px !important;
+            color: #FFFFFF !important;
+            background: linear-gradient(135deg,#20C4B8,#168FAD) !important;
+            border-radius: 50px !important;
+            font-size: 13px !important;
+            font-weight: 800 !important;
+            box-shadow: 0 8px 22px rgba(22,143,173,.24);
+            transition: .3s ease;
+        }
+
+        .header-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(22,143,173,.35);
+        }
+
+        /* =========================================
+           MENÚ MÓVIL
+        ========================================= */
+
+        .slicknav_menu {
+            background: #FFFFFF !important;
+            padding: 8px 12px !important;
+        }
+
+        .slicknav_btn {
+            background: linear-gradient(135deg,#19B7B0,#168FAD) !important;
+            border-radius: 10px !important;
+        }
+
+        .slicknav_nav {
+            background: #FFFFFF !important;
+            border-radius: 12px;
+            margin-top: 8px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .slicknav_nav a {
+            color: var(--dark) !important;
+            font-weight: 700 !important;
+            padding: 11px 15px !important;
+        }
+
+        .slicknav_nav a:hover {
+            background: var(--mint-light) !important;
+            color: var(--mint-dark) !important;
+            border-radius: 8px;
+        }
+
+        /* =========================================
+           PORTADA PRINCIPAL
+           SE CONSERVA LA IMAGEN ORIGINAL
+        ========================================= */
+
+        .slider-bg-vet {
+            min-height: 720px;
+            background-image:
+                linear-gradient(
+                    100deg,
+                    rgba(12,54,70,.91) 0%,
+                    rgba(18,107,112,.78) 48%,
+                    rgba(25,183,176,.23) 100%
+                ),
+                url('https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=85&w=1800&auto=format&fit=crop') !important;
+            background-size: cover !important;
+            background-position: center center !important;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slider-bg-vet::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(
+                circle at 80% 25%,
+                rgba(168,230,230,.20),
+                transparent 32%
+            );
+            pointer-events: none;
+        }
+
+        .hero__caption {
+            position: relative;
+            z-index: 2;
+            max-width: 720px;
+            padding: 35px 0;
+            animation: heroEntrance .8s ease both;
+        }
+
+        .hero__caption span {
+            display: inline-flex;
+            align-items: center;
+            padding: 9px 17px;
+            border: 1px solid rgba(255,255,255,.30);
+            border-radius: 50px;
+            background: rgba(255,255,255,.11);
+            backdrop-filter: blur(10px);
+            color: #C9FFFA !important;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 1.3px;
+            text-transform: uppercase;
+        }
+
+        .hero__caption h1 {
+            margin: 25px 0 20px;
+            color: #FFFFFF !important;
+            font-size: clamp(38px,5vw,66px);
+            line-height: 1.10;
+            font-weight: 900 !important;
+            letter-spacing: -1.8px;
+            text-shadow: 0 8px 30px rgba(0,0,0,.24);
+        }
+
+        .hero__caption p {
+            max-width: 650px;
+            color: #E4F7F8 !important;
+            font-size: 17px;
+            line-height: 1.85;
+            margin-bottom: 32px;
+        }
+
+        .hero-btn {
+            display: inline-flex !important;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 15px 27px !important;
+            background: linear-gradient(135deg,#20C4B8,#168FAD) !important;
+            border: none !important;
+            color: #FFFFFF !important;
+            border-radius: 50px !important;
+            font-weight: 800 !important;
+            font-size: 14px;
+            box-shadow: 0 12px 30px rgba(22,143,173,.30);
+            transition: .3s ease;
+        }
+
+        .hero-btn:hover {
+            background: #FFFFFF !important;
+            color: var(--mint-dark) !important;
+            transform: translateY(-4px);
+            box-shadow: 0 16px 35px rgba(0,0,0,.15);
+        }
+
+        @keyframes heroEntrance {
+            from {
+                opacity: 0;
+                transform: translateY(18px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* =========================================
+           TÍTULOS Y SECCIONES
+        ========================================= */
+
+        .section-padding30 {
+            padding: 100px 0 !important;
+            background: linear-gradient(
+                180deg,
+                #EAF7F8 0%,
+                #F5FBFC 100%
+            ) !important;
+        }
+
+        .section-tittle span {
+            display: inline-block;
+            padding: 8px 18px;
+            background: linear-gradient(135deg,#19B7B0,#168FAD) !important;
+            color: #FFFFFF !important;
+            border-radius: 50px;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            box-shadow: 0 7px 20px rgba(22,143,173,.20);
+        }
+
+        .section-tittle h2 {
+            margin-top: 18px;
+            color: var(--dark) !important;
+            font-size: clamp(30px,4vw,44px);
+            line-height: 1.2;
+            font-weight: 900 !important;
+            letter-spacing: -1px;
+        }
+
+        /* =========================================
+           TARJETAS DE SERVICIOS
+        ========================================= */
+
+        .single-services {
+            height: 100%;
+            background: #FFFFFF !important;
+            border: 1px solid rgba(25,183,176,.16) !important;
+            border-radius: 24px !important;
+            overflow: hidden;
+            box-shadow: 0 10px 32px rgba(23,61,73,.07) !important;
+            transition: transform .35s ease, box-shadow .35s ease;
+            position: relative;
+        }
+
+        .single-services::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg,#20C4B8,#168FAD);
+            opacity: 0;
+            transition: .3s ease;
+            z-index: 2;
+        }
+
+        .single-services:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 22px 48px rgba(23,103,117,.15) !important;
+        }
+
+        .single-services:hover::before {
+            opacity: 1;
+        }
+
+        .single-services img {
+            display: block;
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+            transition: transform .5s ease;
+        }
+
+        .single-services:hover img {
+            transform: scale(1.045);
+        }
+
+        .services-cap {
+            padding: 27px !important;
+        }
+
+        .services-cap h5 {
+            color: var(--dark) !important;
+            font-size: 19px;
+            line-height: 1.4;
+            font-weight: 800 !important;
+            margin-bottom: 12px;
+        }
+
+        .services-cap p {
+            color: var(--text) !important;
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 0;
+        }
+
+        /* =========================================
+           FORMULARIO DE CITAS
+        ========================================= */
+
+        .contact-form-main {
+            padding: 110px 0 !important;
+            background:
+                linear-gradient(
+                    110deg,
+                    rgba(228,247,248,.94),
+                    rgba(236,248,247,.84)
+                ),
+                url('https://images.unsplash.com/photo-1543466835-00a7907e9de1?q=85&w=1600&auto=format&fit=crop')
+                center/cover no-repeat !important;
+            position: relative;
+        }
+
+        .form-wrapper {
+            padding: 45px !important;
+            background: rgba(255,255,255,.97) !important;
+            border: 1px solid rgba(25,183,176,.20) !important;
+            border-radius: 28px !important;
+            box-shadow: 0 25px 65px rgba(18,107,112,.15) !important;
+            backdrop-filter: blur(15px);
+        }
+
+        .form-box input,
+        .form-box textarea,
+        .select-itms select {
+            width: 100%;
+            border: 2px solid #D8ECEE !important;
+            border-radius: 13px !important;
+            background: #F9FDFD !important;
+            color: var(--dark) !important;
+            padding: 15px 18px !important;
+            font-family: inherit;
+            font-size: 14px !important;
+            transition: .3s ease;
+        }
+
+        .form-box input:focus,
+        .form-box textarea:focus,
+        .select-itms select:focus {
+            border-color: var(--mint-primary) !important;
+            background: #FFFFFF !important;
+            box-shadow: 0 0 0 4px rgba(25,183,176,.12) !important;
+            outline: none;
+        }
+
+        .form-box input::placeholder,
+        .form-box textarea::placeholder {
+            color: #8CA5AB !important;
+        }
+
+        .form-box textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .submit-btn2 {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            border: none !important;
+            padding: 15px 28px !important;
+            background: linear-gradient(135deg,#20C4B8,#168FAD) !important;
+            color: #FFFFFF !important;
+            border-radius: 50px !important;
+            font-weight: 800 !important;
+            box-shadow: 0 10px 25px rgba(22,143,173,.25);
+            transition: .3s ease;
+            cursor: pointer;
+        }
+
+        .submit-btn2:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(22,143,173,.35);
+        }
+
+        /* =========================================
+           FRANJA DE EMERGENCIAS
+           SE CONSERVA LA IMAGEN ORIGINAL
+        ========================================= */
+
+        .contact-animal-owner {
+            padding: 100px 20px !important;
+            background:
+                linear-gradient(
+                    120deg,
+                    rgba(13,58,75,.96),
+                    rgba(18,107,112,.91),
+                    rgba(22,143,145,.85)
+                ),
+                url('https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=85&w=1600&auto=format&fit=crop')
+                center/cover no-repeat !important;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-animal-owner::before {
+            content: "🐾";
+            position: absolute;
+            right: 8%;
+            top: 10%;
+            font-size: 150px;
+            opacity: .07;
+            transform: rotate(-15deg);
+            pointer-events: none;
+        }
+
+        .contact-animal-owner h3 {
+            color: #FFFFFF !important;
+            font-size: clamp(28px,4vw,43px);
+            line-height: 1.2;
+            font-weight: 900 !important;
+            margin-bottom: 18px;
+        }
+
+        .contact-animal-owner p {
+            color: #D9F8F5 !important;
+            font-size: 17px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .contact-animal-owner .btn {
+            min-width: 205px;
+            padding: 14px 22px !important;
+            border-radius: 50px !important;
+            font-weight: 800 !important;
+            transition: .3s ease;
+        }
+
+        .contact-animal-owner .btn:hover {
+            transform: translateY(-4px);
+        }
+
+        .contact-animal-owner .btn.hero-btn:hover {
+            background: #FFFFFF !important;
+            color: var(--mint-dark) !important;
+        }
+
+        /* =========================================
+           PIE DE PÁGINA
+        ========================================= */
+
+        .footer-area {
+            background: linear-gradient(
+                135deg,
+                #123D50,
+                #126B70,
+                #168F91
+            ) !important;
+            padding-top: 80px !important;
+        }
+
+        .footer-logo .logo-text {
+            color: #FFFFFF !important;
+        }
+
+        .footer-logo .logo-text i {
+            background: rgba(255,255,255,.14);
+            color: #B9F2F1;
+        }
+
+        .footer-logo .logo-text span {
+            color: #8DE7DF !important;
+        }
+
+        .footer-pera p,
+        .footer-tittle ul li a {
+            color: #D4F4F1 !important;
+            font-size: 14px;
+            line-height: 1.9;
+            transition: .3s ease;
+        }
+
+        .footer-tittle h4 {
+            color: #FFFFFF !important;
+            font-size: 18px;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .footer-tittle h4::after {
+            content: "";
+            display: block;
+            width: 42px;
+            height: 3px;
+            background: #8DE7DF;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        .footer-tittle ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .footer-tittle ul li {
+            margin-bottom: 7px;
+        }
+
+        .footer-tittle ul li a:hover {
+            color: #FFFFFF !important;
+            padding-left: 5px;
+        }
+
+        .footer-social a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 43px;
+            height: 43px;
+            margin-right: 8px;
+            border-radius: 50%;
+            background: rgba(255,255,255,.13) !important;
+            color: #FFFFFF !important;
+            transition: .3s ease;
+        }
+
+        .footer-social a:hover {
+            background: #FFFFFF !important;
+            color: var(--mint-dark) !important;
+            transform: translateY(-4px);
+        }
+
+        .footer-bottom-area {
+            background: #103442 !important;
+            border-top: 1px solid rgba(255,255,255,.10) !important;
+        }
+
+        .footer-copy-right p {
+            color: #B9E9E6 !important;
+            font-size: 13px;
+            padding: 15px 0;
+        }
+
+        /* =========================================
+           WHATSAPP FLOTANTE
+        ========================================= */
+
+        .whatsapp-float {
+            position: fixed;
+            right: 25px;
+            bottom: 25px;
+            width: 62px;
+            height: 62px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #20C997 !important;
+            color: #FFFFFF !important;
+            border-radius: 50%;
+            font-size: 31px;
+            z-index: 9999;
+            box-shadow: 0 10px 30px rgba(32,201,151,.32);
+            transition: .3s ease;
+            border: 4px solid rgba(255,255,255,.95);
+        }
+
+        .whatsapp-float:hover {
+            background: #159F86 !important;
+            color: #FFFFFF !important;
+            transform: translateY(-5px) scale(1.06);
+            box-shadow: 0 15px 35px rgba(32,201,151,.45);
+        }
+
+        /* =========================================
+           CARGA Y DETALLES
+        ========================================= */
+
+        #preloader-active {
+            background: #FFFFFF;
+        }
+
+        .preloader-img strong {
+            color: #168FAD !important;
+        }
+
+        .mb-30 {
+            margin-bottom: 30px !important;
+        }
+
+        /* =========================================
+           DISEÑO RESPONSIVE
+        ========================================= */
+
+        @media (max-width: 1199px) {
+            .logo-text {
+                font-size: 21px;
+                gap: 7px;
+            }
+
+            .main-menu ul li a {
+                padding: 12px 8px !important;
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .main-header {
+                min-height: 72px;
+            }
+
+            .slider-bg-vet {
+                min-height: 650px;
+            }
+
+            .hero__caption {
+                padding: 40px 0;
+            }
+
+            .form-wrapper {
+                padding: 30px !important;
+            }
+        }
+
+        @media (max-width: 767px) {
+            html {
+                scroll-padding-top: 70px;
+            }
+
+            .slider-bg-vet {
+                min-height: 650px;
+                background-position: 58% center !important;
+            }
+
+            .hero__caption {
+                padding: 30px 0;
+            }
+
+            .hero__caption h1 {
+                font-size: clamp(34px,8vw,42px);
+                line-height: 1.14;
+                letter-spacing: -1px;
+                margin-top: 22px;
+            }
+
+            .hero__caption p {
+                font-size: 15px;
+                line-height: 1.8;
+            }
+
+            .hero__caption span {
+                font-size: 10px;
+                letter-spacing: .8px;
+            }
+
+            .hero-btn {
+                padding: 14px 21px !important;
+            }
+
+            .section-padding30 {
+                padding: 70px 0 !important;
+            }
+
+            .section-tittle h2 {
+                font-size: 31px;
+            }
+
+            .single-services img {
+                height: 220px;
+            }
+
+            .services-cap {
+                padding: 23px !important;
+            }
+
+            .form-wrapper {
+                padding: 24px !important;
+                border-radius: 22px !important;
+            }
+
+            .contact-form-main {
+                padding: 70px 0 !important;
+            }
+
+            .contact-animal-owner {
+                padding: 75px 20px !important;
+            }
+
+            .contact_btn {
+                gap: 12px !important;
+            }
+
+            .contact-animal-owner .btn {
+                width: 100%;
+            }
+
+            .footer-area {
+                padding-top: 55px !important;
+            }
+
+            .whatsapp-float {
+                width: 56px;
+                height: 56px;
+                right: 18px;
+                bottom: 18px;
+                font-size: 27px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto !important;
+                animation-duration: .01ms !important;
+                transition-duration: .01ms !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- PRELOADER -->
+
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text text-center">
+                    <strong style="color:#168FAD;font-size:22px;">
+                        Veterinaria Silv
+                    </strong>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ENCABEZADO -->
+
+    <header>
+        <div class="header-area">
+            <div class="main-header header-sticky">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+
+                        <div class="col-xl-3 col-lg-3 col-md-3 col-8">
+                            <div class="logo">
+                                <a href="index.html" class="logo-text">
+                                    <i class="fas fa-paw"></i>
+                                    Veterinaria <span>Silv</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-9 col-lg-9 col-md-9 col-4">
+                            <div class="menu-main d-flex align-items-center justify-content-end">
+
+                                <div class="main-menu f-right d-none d-lg-block">
+                                    <nav>
+                                        <ul id="navigation">
+                                            <li><a href="index.html">Inicio</a></li>
+                                            <li><a href="about.html">Nosotros</a></li>
+                                            <li><a href="services.html">Servicios</a></li>
+                                            <li><a href="blog.html">Consejos</a></li>
+                                            <li><a href="contact.html">Contacto</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+
+                                <div class="header-right-btn f-right d-none d-lg-block ml-30">
+                                    <a href="https://wa.me/50493289376"
+                                       target="_blank"
+                                       rel="noopener noreferrer"
+                                       class="header-btn">
+                                        <i class="fab fa-whatsapp"></i>
+                                        Urgencias 24/7
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- PORTADA -->
+
+        <section class="slider-area">
+            <div class="slider-active dot-style">
+                <div class="single-slider d-flex align-items-center slider-height slider-bg-vet">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-xl-8 col-lg-9 col-md-11">
+                                <div class="hero__caption">
+
+                                    <span>🐾 Santa Cruz de Yojoa, Cortés</span>
+
+                                    <h1>
+                                        Cuidamos a tu mejor amigo como parte de la familia
+                                    </h1>
+
+                                    <p>
+                                        En <strong>Veterinaria Silv</strong> brindamos atención
+                                        veterinaria especializada para perros y gatos,
+                                        con cariño, profesionalismo y compromiso con su bienestar.
+                                    </p>
+
+                                    <a href="#contact-form" class="hero-btn">
+                                        Agendar Cita Médica
+                                        <i class="ti-arrow-right"></i>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICIOS -->
+
+        <section class="our-services section-padding30" id="servicios">
+            <div class="container">
+
+                <div class="row justify-content-center">
+                    <div class="col-xl-8 col-lg-9">
+                        <div class="section-tittle text-center mb-70">
+                            <span>Atención especializada</span>
+                            <h2>Todo para la salud de tu mascota</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <!-- SERVICIO 1 -->
+
+                    <div class="col-lg-4 col-md-6 col-sm-6 mb-30">
+                        <div class="single-services text-center">
+                            <img
+                                src="https://img.sanishtech.com/u/587af805aff788bf5fb49f382a2718d7.jpg"
+                                alt="Consulta veterinaria para gatos"
+                                loading="lazy">
+
+                            <div class="services-cap">
+                                <h5>🏥 Consulta General</h5>
+                                <p>
+                                    Evaluación clínica, diagnóstico y tratamiento
+                                    personalizado para perros y gatos.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SERVICIO 2 -->
+
+                    <div class="col-lg-4 col-md-6 col-sm-6 mb-30">
+                        <div class="single-services text-center">
+                            <img
+                                src="https://img.sanishtech.com/u/25e715d309c25fc089208d6558c59b8b.jpg"
+                                alt="Vacunación veterinaria"
+                                loading="lazy">
+
+                            <div class="services-cap">
+                                <h5>💉 Vacunación & Salud</h5>
+                                <p>
+                                    Vacunación, desparasitación y prevención
+                                    contra pulgas y garrapatas.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SERVICIO 3 -->
+
+                    <div class="col-lg-4 col-md-6 col-sm-6 mb-30">
+                        <div class="single-services text-center">
+                            <img
+                                src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?q=85&w=700&auto=format&fit=crop"
+                                alt="Grooming veterinario"
+                                loading="lazy">
+
+                            <div class="services-cap">
+                                <h5>🛁 Grooming & Estética</h5>
+                                <p>
+                                    Baños, cortes, limpieza de oídos,
+                                    corte de uñas e higiene profesional.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SERVICIO 4 -->
+
+                    <div class="col-lg-4 col-md-6 col-sm-6 mb-30">
+                        <div class="single-services text-center">
+                            <img
+                                src="https://img.sanishtech.com/u/5718fbc72a7013c09f8815f89e77c3f1.jpg"
+                                alt="Cirugía veterinaria"
+                                loading="lazy">
+
+                            <div class="services-cap">
+                                <h5>⚕️ Cirugías</h5>
+                                <p>
+                                    Esterilización, castración y procedimientos
+                                    quirúrgicos con atención especializada.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SERVICIO 5 -->
+
+                    <div class="col-lg-4 col-md-6 col-sm-6 mb-30">
+                        <div class="single-services text-center">
+                            <img
+                                src="https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?q=85&w=700&auto=format&fit=crop"
+                                alt="Laboratorio veterinario"
+                                loading="lazy">
+
+                            <div class="services-cap">
+                                <h5>🔬 Laboratorio Clínico</h5>
+                                <p>
+                                    Análisis de sangre, orina y coproparasitario
+                                    para apoyar un diagnóstico preciso.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SERVICIO 6 -->
+
+                    <div class="col-lg-4 col-md-6 col-sm-6 mb-30">
+                        <div class="single-services text-center">
+                            <img
+                                src="https://img.sanishtech.com/u/92db26b61db8c71752ad552e00afafeb.jpg"
+                                alt="Emergencias veterinarias"
+                                loading="lazy">
+
+                            <div class="services-cap">
+                                <h5>🚨 Emergencias 24/7</h5>
+                                <p>
+                                    Atención inmediata para situaciones
+                                    veterinarias que requieren asistencia urgente.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- FORMULARIO DE CITAS -->
+
+        <section class="contact-form-main section-padding30" id="contact-form">
+            <div class="container">
+                <div class="row justify-content-end">
+                    <div class="col-xl-7 col-lg-8">
+                        <div class="form-wrapper">
+
+                            <div class="form-tittle">
+                                <div class="section-tittle mb-40">
+                                    <span>Reserva Online</span>
+                                    <h2>Agenda tu cita</h2>
+                                </div>
+                            </div>
+
+                            <form id="appointment-form">
+
+                                <div class="row">
+
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="form-box mb-30">
+                                            <input
+                                                type="text"
+                                                name="name"
+                                                placeholder="Tu nombre completo"
+                                                autocomplete="name"
+                                                required>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="form-box mb-30">
+                                            <input
+                                                type="tel"
+                                                name="phone"
+                                                placeholder="Teléfono / WhatsApp"
+                                                autocomplete="tel"
+                                                required>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 mb-30">
+                                        <div class="select-itms">
+                                            <select name="pet_type" required>
+                                                <option value="">Tipo de mascota</option>
+                                                <option value="Perro">🐕 Perro</option>
+                                                <option value="Gato">🐈 Gato</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 mb-30">
+                                        <div class="select-itms">
+                                            <select name="service" required>
+                                                <option value="">Servicio requerido</option>
+                                                <option value="Consulta General">Consulta General</option>
+                                                <option value="Vacunación y Desparasitación">Vacunación y Desparasitación</option>
+                                                <option value="Grooming / Baño Medicado">Grooming / Baño Medicado</option>
+                                                <option value="Evaluación Quirúrgica">Evaluación Quirúrgica</option>
+                                                <option value="Laboratorio Clínico">Laboratorio Clínico</option>
+                                                <option value="Emergencia">Emergencia</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12 mb-30">
+                                        <div class="form-box">
+                                            <input
+                                                type="text"
+                                                name="pet_name"
+                                                placeholder="Nombre y edad de tu mascota">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12">
+                                        <div class="form-box mb-30">
+                                            <textarea
+                                                name="message"
+                                                placeholder="Cuéntanos el motivo de la consulta..."
+                                                rows="5"></textarea>
+                                        </div>
+
+                                        <button class="submit-btn2" type="submit">
+                                            Confirmar Cita Médica
+                                            <i class="ti-arrow-right"></i>
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EMERGENCIAS -->
+
+        <section class="contact-animal-owner">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-9">
+                        <div class="text-center">
+
+                            <h3>¿Tu mascota necesita atención urgente? 🚨</h3>
+
+                            <p>
+                                En <strong>Veterinaria Silv</strong> estamos disponibles
+                                para atender emergencias veterinarias en
+                                Santa Cruz de Yojoa, Cortés.
+                            </p>
+
+                            <div class="contact_btn d-flex align-items-center justify-content-center flex-wrap gap-3">
+
+                                <a
+                                    href="https://wa.me/50493289376"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="btn"
+                                    style="background:#20C997!important;border-color:#20C997!important;color:white!important;">
+
+                                    <i class="fab fa-whatsapp mr-2"></i>
+                                    WhatsApp Urgencia
+                                </a>
+
+                                <a href="tel:+50493289376" class="btn hero-btn">
+                                    <i class="fas fa-phone mr-2"></i>
+                                    Llamar Ahora
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+
+    <footer>
+        <div class="footer-area footer-padding">
+            <div class="container">
+                <div class="row justify-content-between">
+
+                    <!-- INFORMACIÓN -->
+
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-footer-caption mb-50">
+
+                            <div class="footer-logo mb-25">
+                                <a href="index.html" class="logo-text">
+                                    <i class="fas fa-paw"></i>
+                                    Veterinaria <span>Silv</span>
+                                </a>
+                            </div>
+
+                            <div class="footer-pera">
+                                <p>
+                                    Atención veterinaria especializada
+                                    para perros y gatos, con cariño,
+                                    profesionalismo y compromiso.
+                                </p>
+                            </div>
+
+                            <div class="footer-social">
+                                <a href="#"
+                                   aria-label="Facebook"
+                                   onclick="return false;">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+
+                                <a href="#"
+                                   aria-label="Instagram"
+                                   onclick="return false;">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+
+                                <a href="https://wa.me/50493289376"
+                                   target="_blank"
+                                   rel="noopener noreferrer"
+                                   aria-label="WhatsApp">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- CONTACTO -->
+
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <div class="single-footer-caption mb-50">
+                            <div class="footer-tittle">
+
+                                <h4>Contacto</h4>
+
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            📍 Santa Cruz de Yojoa,
+                                            Cortés, Honduras
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="tel:+50493289376">
+                                            📞 +504 9328-9376
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="mailto:info@veterinariasilv.com">
+                                            ✉️ info@veterinariasilv.com
+                                        </a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SERVICIOS -->
+
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <div class="single-footer-caption mb-50">
+                            <div class="footer-tittle">
+
+                                <h4>Servicios</h4>
+
+                                <ul>
+                                    <li><a href="#servicios">🏥 Consulta General</a></li>
+                                    <li><a href="#servicios">💉 Vacunación</a></li>
+                                    <li><a href="#servicios">⚕️ Cirugías</a></li>
+                                    <li><a href="#servicios">🛁 Grooming</a></li>
+                                    <li><a href="#servicios">🔬 Laboratorio</a></li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="footer-border">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="footer-copy-right text-center">
+                                <p>
+                                    © 2026 Veterinaria Silv —
+                                    Santa Cruz de Yojoa, Cortés.
+                                    Cuidado especializado para perros y gatos.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLOTANTE -->
+
+    <a
+        href="https://wa.me/50493289376"
+        class="whatsapp-float"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Contactar a Veterinaria Silv por WhatsApp">
+
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- SCRIPTS DEL PROYECTO -->
+
+    <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/jquery.slicknav.min.js"></script>
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <script src="./assets/js/slick.min.js"></script>
+    <script src="./assets/js/wow.min.js"></script>
+    <script src="./assets/js/animated.headline.js"></script>
+    <script src="./assets/js/jquery.magnific-popup.js"></script>
+    <script src="./assets/js/jquery.nice-select.min.js"></script>
+    <script src="./assets/js/jquery.sticky.js"></script>
+    <script src="./assets/js/main.js"></script>
+
+    <!-- ENVÍO DE CITAS POR WHATSAPP -->
+
+    <script>
+        document
+            .getElementById("appointment-form")
+            .addEventListener("submit", function (e) {
+
+                e.preventDefault();
+
+                const formulario = e.currentTarget;
+
+                const nombre =
+                    formulario.elements["name"].value.trim();
+
+                const telefono =
+                    formulario.elements["phone"].value.trim();
+
+                const mascota =
+                    formulario.elements["pet_type"].value;
+
+                const servicio =
+                    formulario.elements["service"].value;
+
+                const nombreMascota =
+                    formulario.elements["pet_name"].value.trim();
+
+                const mensaje =
+                    formulario.elements["message"].value.trim();
+
+                const texto =
+                    `Hola, Veterinaria Silv. 🐾\n\n` +
+                    `Quiero agendar una cita médica.\n\n` +
+                    `👤 Nombre: ${nombre}\n` +
+                    `📱 Teléfono: ${telefono}\n` +
+                    `🐾 Mascota: ${mascota}\n` +
+                    `🩺 Servicio: ${servicio}\n` +
+                    `🐶 Nombre/edad: ${nombreMascota || "No indicado"}\n` +
+                    `📝 Motivo: ${mensaje || "No indicado"}`;
+
+                const url =
+                    "https://wa.me/50493289376?text=" +
+                    encodeURIComponent(texto);
+
+                window.open(url, "_blank", "noopener,noreferrer");
+            });
+    </script>
+
+</body>
+</html>

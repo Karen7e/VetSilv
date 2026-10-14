@@ -1,0 +1,1693 @@
+<!doctype html>
+<html class="no-js" lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Veterinaria Silv | Blog y Consejos para Mascotas</title>
+    <meta name="description" content="Descubre consejos veterinarios para cuidar la salud, nutrición y bienestar de perros y gatos en Santa Cruz de Yojoa, Cortés.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        :root {
+            --mint-primary: #1ABC9C;
+            --mint-secondary: #16A085;
+            --mint-light: #E8F8F5;
+            --mint-pale: #F4FFFB;
+            --mint-accent: #0E7856;
+            --mint-dark: #104C3B;
+            --dark-text: #173D32;
+            --text: #35564B;
+            --muted: #6A8178;
+            --white: #FFFFFF;
+            --line: rgba(22,160,133,0.16);
+            --shadow: 0 18px 45px rgba(14, 94, 69, 0.10);
+            --shadow-hover: 0 24px 55px rgba(14, 94, 69, 0.17);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 110px;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Manrope", sans-serif;
+            color: var(--dark-text);
+            background:
+                radial-gradient(circle at 5% 25%, rgba(26,188,156,0.08), transparent 25%),
+                radial-gradient(circle at 95% 60%, rgba(22,160,133,0.07), transparent 25%),
+                linear-gradient(180deg, #F7FFFB 0%, #ECF9F3 100%);
+            overflow-x: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        button, input {
+            font: inherit;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            width: min(1160px, calc(100% - 36px));
+            margin: 0 auto;
+        }
+
+        /* Barra superior */
+        .topbar {
+            background: var(--mint-dark);
+            color: rgba(255,255,255,0.9);
+            font-size: 0.82rem;
+        }
+
+        .topbar-inner {
+            min-height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+            flex-wrap: wrap;
+            padding: 7px 0;
+        }
+
+        .topbar span {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+        }
+
+        .topbar i {
+            color: #73E6C5;
+        }
+
+        .topbar a:hover {
+            color: #83F0D0;
+        }
+
+        /* Encabezado */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(255,255,255,0.94);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--line);
+            box-shadow: 0 5px 22px rgba(14,94,69,0.04);
+        }
+
+        .nav {
+            min-height: 84px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 22px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-shrink: 0;
+        }
+
+        .brand-mark {
+            width: 48px;
+            height: 48px;
+            display: grid;
+            place-items: center;
+            border-radius: 16px;
+            background: linear-gradient(135deg, var(--mint-primary), var(--mint-accent));
+            color: white;
+            font-size: 1.35rem;
+            box-shadow: 0 9px 22px rgba(26,188,156,0.28);
+        }
+
+        .brand-text small {
+            display: block;
+            color: var(--muted);
+            font-size: 0.65rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+        }
+
+        .brand-text strong {
+            display: block;
+            color: var(--mint-dark);
+            font-size: 1.13rem;
+            line-height: 1.5;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 25px;
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+
+        .nav-links a {
+            position: relative;
+            padding: 9px 0;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--mint-secondary);
+        }
+
+        .nav-links a.active::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 3px;
+            border-radius: 99px;
+            background: var(--mint-primary);
+        }
+
+        .nav-cta,
+        .button-primary {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            gap: 9px;
+            padding: 13px 19px;
+            border: 0;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--mint-primary), var(--mint-accent));
+            color: white;
+            font-weight: 800;
+            font-size: 0.87rem;
+            box-shadow: 0 10px 22px rgba(26,188,156,0.22);
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .nav-cta:hover,
+        .button-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 28px rgba(26,188,156,0.3);
+        }
+
+        /* Portada */
+        .hero {
+            position: relative;
+            overflow: hidden;
+            padding: 78px 0 84px;
+            color: white;
+            background:
+                radial-gradient(circle at 10% 20%, rgba(255,255,255,0.16), transparent 25%),
+                radial-gradient(circle at 90% 85%, rgba(255,255,255,0.15), transparent 25%),
+                linear-gradient(125deg, #0E7856 0%, #16A085 52%, #1ABC9C 100%);
+        }
+
+        .hero::before,
+        .hero::after {
+            content: "";
+            position: absolute;
+            border: 1px solid rgba(255,255,255,0.16);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero::before {
+            width: 300px;
+            height: 300px;
+            top: -170px;
+            right: 7%;
+        }
+
+        .hero::after {
+            width: 230px;
+            height: 230px;
+            bottom: -150px;
+            left: 7%;
+        }
+
+        .hero-inner {
+            position: relative;
+            z-index: 1;
+            max-width: 850px;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            padding: 9px 15px;
+            margin-bottom: 22px;
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 999px;
+            background: rgba(255,255,255,0.13);
+            color: white;
+            font-size: 0.8rem;
+            font-weight: 800;
+            letter-spacing: 0.04em;
+        }
+
+        .hero h1 {
+            margin: 0;
+            font-size: clamp(2.25rem, 5vw, 4rem);
+            line-height: 1.15;
+            letter-spacing: -0.045em;
+        }
+
+        .hero p {
+            max-width: 720px;
+            margin: 20px auto 0;
+            color: rgba(255,255,255,0.92);
+            line-height: 1.9;
+            font-size: 1.02rem;
+        }
+
+        .hero-note {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 24px;
+            padding: 11px 17px;
+            border-radius: 14px;
+            background: rgba(255,255,255,0.14);
+            font-size: 0.86rem;
+            font-weight: 700;
+        }
+
+        /* Sección principal */
+        .blog-section {
+            position: relative;
+            padding: 72px 0 88px;
+        }
+
+        .section-heading {
+            margin-bottom: 34px;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--mint-accent);
+            font-size: 0.77rem;
+            font-weight: 800;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .section-heading h2 {
+            margin: 10px 0 10px;
+            color: var(--mint-dark);
+            font-size: clamp(1.7rem, 3vw, 2.5rem);
+            letter-spacing: -0.035em;
+        }
+
+        .section-heading p {
+            max-width: 670px;
+            margin: 0;
+            color: var(--muted);
+            line-height: 1.8;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.85fr) minmax(280px, 0.9fr);
+            align-items: start;
+            gap: 32px;
+        }
+
+        .blog-main {
+            min-width: 0;
+        }
+
+        /* Artículos */
+        .article {
+            overflow: hidden;
+            margin-bottom: 30px;
+            border: 1px solid var(--line);
+            border-radius: 25px;
+            background: rgba(255,255,255,0.96);
+            box-shadow: var(--shadow);
+            transition: transform 0.28s ease, box-shadow 0.28s ease;
+        }
+
+        .article:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .article-image {
+            position: relative;
+            height: 320px;
+            overflow: hidden;
+            background: linear-gradient(135deg, #BEEFD9, #1ABC9C);
+        }
+
+        .article-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.55s ease;
+        }
+
+        .article:hover .article-image img {
+            transform: scale(1.045);
+        }
+
+        .article-image::after {
+            content: "";
+            position: absolute;
+            inset: 45% 0 0;
+            background: linear-gradient(transparent, rgba(12,54,40,0.17));
+            pointer-events: none;
+        }
+
+        .article-date {
+            position: absolute;
+            z-index: 1;
+            top: 18px;
+            right: 18px;
+            min-width: 68px;
+            padding: 11px 12px;
+            border: 1px solid rgba(255,255,255,0.4);
+            border-radius: 15px;
+            background: rgba(255,255,255,0.94);
+            color: var(--mint-accent);
+            text-align: center;
+            box-shadow: 0 8px 24px rgba(14,94,69,0.16);
+        }
+
+        .article-date b {
+            display: block;
+            font-size: 1.6rem;
+            line-height: 1.1;
+        }
+
+        .article-date span {
+            display: block;
+            margin-top: 3px;
+            font-size: 0.72rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .article-content {
+            padding: 28px 30px 30px;
+        }
+
+        .article-category {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            margin-bottom: 13px;
+            padding: 7px 11px;
+            border-radius: 999px;
+            background: var(--mint-light);
+            color: var(--mint-accent);
+            font-size: 0.74rem;
+            font-weight: 800;
+        }
+
+        .article-content h2 {
+            margin: 0 0 13px;
+            color: var(--mint-dark);
+            font-size: clamp(1.35rem, 2.5vw, 1.9rem);
+            line-height: 1.4;
+            letter-spacing: -0.025em;
+        }
+
+        .article-content h2 a {
+            transition: color 0.2s ease;
+        }
+
+        .article-content h2 a:hover {
+            color: var(--mint-secondary);
+        }
+
+        .article-content p {
+            margin: 0 0 20px;
+            color: var(--muted);
+            font-size: 0.94rem;
+            line-height: 1.9;
+        }
+
+        .article-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px 22px;
+            padding-top: 17px;
+            border-top: 1px solid var(--line);
+            color: var(--muted);
+            font-size: 0.82rem;
+        }
+
+        .article-meta span {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .article-meta i {
+            color: var(--mint-secondary);
+        }
+
+        .article-meta a:hover {
+            color: var(--mint-accent);
+        }
+
+        .read-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            margin-top: 19px;
+            color: var(--mint-accent);
+            font-size: 0.88rem;
+            font-weight: 800;
+        }
+
+        .read-more i {
+            transition: transform 0.2s ease;
+        }
+
+        .read-more:hover i {
+            transform: translateX(5px);
+        }
+
+        .no-results {
+            display: none;
+            padding: 28px;
+            margin-bottom: 28px;
+            border: 1px dashed var(--mint-primary);
+            border-radius: 20px;
+            background: white;
+            color: var(--muted);
+            text-align: center;
+        }
+
+        /* Paginación */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .pagination a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 42px;
+            height: 42px;
+            border: 1px solid var(--line);
+            border-radius: 13px;
+            background: rgba(255,255,255,0.85);
+            color: var(--mint-accent);
+            font-weight: 800;
+            transition: all 0.2s ease;
+        }
+
+        .pagination a:hover,
+        .pagination a.active {
+            border-color: transparent;
+            background: linear-gradient(135deg, var(--mint-primary), var(--mint-accent));
+            color: white;
+            box-shadow: 0 8px 18px rgba(26,188,156,0.2);
+        }
+
+        /* Barra lateral */
+        .sidebar {
+            display: grid;
+            gap: 23px;
+            align-content: start;
+        }
+
+        .widget {
+            padding: 25px;
+            border: 1px solid var(--line);
+            border-radius: 23px;
+            background: rgba(255,255,255,0.94);
+            box-shadow: 0 12px 32px rgba(14,94,69,0.07);
+        }
+
+        .widget h3 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 0 0 19px;
+            color: var(--mint-dark);
+            font-size: 1.12rem;
+        }
+
+        .widget h3 i {
+            display: grid;
+            place-items: center;
+            width: 34px;
+            height: 34px;
+            border-radius: 11px;
+            background: var(--mint-light);
+            color: var(--mint-accent);
+            font-size: 0.9rem;
+        }
+
+        /* Buscador */
+        .search-form {
+            display: flex;
+            gap: 8px;
+        }
+
+        .search-form input,
+        .newsletter-form input {
+            min-width: 0;
+            width: 100%;
+            padding: 13px 14px;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            outline: none;
+            background: #F8FFFB;
+            color: var(--dark-text);
+            font-size: 0.86rem;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .search-form input:focus,
+        .newsletter-form input:focus {
+            border-color: var(--mint-primary);
+            box-shadow: 0 0 0 4px rgba(26,188,156,0.12);
+        }
+
+        .search-form button {
+            width: 47px;
+            flex-shrink: 0;
+            border: 0;
+            border-radius: 12px;
+            background: linear-gradient(135deg, var(--mint-primary), var(--mint-accent));
+            color: white;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .search-form button:hover {
+            transform: scale(1.05);
+        }
+
+        /* Categorías */
+        .category-list {
+            display: grid;
+            gap: 12px;
+        }
+
+        .category-list li {
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .category-list li:last-child {
+            padding-bottom: 0;
+            border-bottom: 0;
+        }
+
+        .category-list a {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            color: var(--text);
+            font-size: 0.88rem;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        .category-list a:hover {
+            color: var(--mint-accent);
+        }
+
+        .category-list span {
+            min-width: 30px;
+            padding: 5px 8px;
+            border-radius: 999px;
+            background: var(--mint-light);
+            color: var(--mint-accent);
+            text-align: center;
+            font-size: 0.74rem;
+            font-weight: 800;
+        }
+
+        /* Artículos recientes */
+        .recent-list {
+            display: grid;
+            gap: 15px;
+        }
+
+        .recent-list li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .recent-list li:last-child {
+            padding-bottom: 0;
+            border-bottom: 0;
+        }
+
+        .recent-thumb {
+            width: 76px;
+            height: 76px;
+            flex-shrink: 0;
+            overflow: hidden;
+            border-radius: 14px;
+            background: var(--mint-light);
+        }
+
+        .recent-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .recent-list li:hover .recent-thumb img {
+            transform: scale(1.08);
+        }
+
+        .recent-info h4 {
+            margin: 0 0 6px;
+            color: var(--mint-dark);
+            font-size: 0.84rem;
+            line-height: 1.5;
+        }
+
+        .recent-info h4 a:hover {
+            color: var(--mint-secondary);
+        }
+
+        .recent-info time {
+            color: var(--muted);
+            font-size: 0.75rem;
+        }
+
+        /* Etiquetas */
+        .tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px;
+        }
+
+        .tag-list a {
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 12px;
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            background: var(--mint-pale);
+            color: var(--mint-accent);
+            font-size: 0.77rem;
+            font-weight: 800;
+            transition: all 0.2s ease;
+        }
+
+        .tag-list a:hover {
+            border-color: transparent;
+            background: linear-gradient(135deg, var(--mint-primary), var(--mint-accent));
+            color: white;
+        }
+
+        /* Newsletter */
+        .newsletter-widget {
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(145deg, #E8F8F5, #FFFFFF);
+        }
+
+        .newsletter-widget::after {
+            content: "";
+            position: absolute;
+            width: 110px;
+            height: 110px;
+            top: -55px;
+            right: -40px;
+            border-radius: 50%;
+            background: rgba(26,188,156,0.12);
+            pointer-events: none;
+        }
+
+        .newsletter-copy {
+            margin: 0 0 17px;
+            color: var(--muted);
+            font-size: 0.85rem;
+            line-height: 1.8;
+        }
+
+        .newsletter-form {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            gap: 11px;
+        }
+
+        .newsletter-form button {
+            padding: 13px 17px;
+            border: 0;
+            border-radius: 12px;
+            background: linear-gradient(135deg, var(--mint-primary), var(--mint-accent));
+            color: white;
+            font-weight: 800;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .newsletter-form button:hover {
+            transform: translateY(-2px);
+        }
+
+        .form-message {
+            display: none;
+            margin: 12px 0 0;
+            color: var(--mint-accent);
+            font-size: 0.8rem;
+            font-weight: 700;
+            line-height: 1.6;
+        }
+
+        /* Franja de contacto */
+        .contact-strip {
+            padding: 0 0 76px;
+        }
+
+        .contact-strip-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+            padding: 34px;
+            border-radius: 26px;
+            background:
+                radial-gradient(circle at 100% 0%, rgba(255,255,255,0.17), transparent 30%),
+                linear-gradient(120deg, #104C3B, #0E7856 65%, #16A085);
+            color: white;
+            box-shadow: var(--shadow);
+        }
+
+        .contact-strip h2 {
+            margin: 0 0 9px;
+            font-size: clamp(1.35rem, 3vw, 1.9rem);
+        }
+
+        .contact-strip p {
+            max-width: 640px;
+            margin: 0;
+            color: rgba(255,255,255,0.86);
+            line-height: 1.8;
+            font-size: 0.9rem;
+        }
+
+        .contact-strip .button-primary {
+            flex-shrink: 0;
+            background: white;
+            color: var(--mint-accent);
+            box-shadow: none;
+        }
+
+        /* Pie de página */
+        footer {
+            padding: 58px 0 24px;
+            background: #103E31;
+            color: rgba(255,255,255,0.82);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.3fr 0.8fr 1fr;
+            gap: 38px;
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 17px;
+            color: white;
+            font-weight: 800;
+            font-size: 1.1rem;
+        }
+
+        .footer-brand .brand-mark {
+            width: 44px;
+            height: 44px;
+            border-radius: 14px;
+        }
+
+        .footer-copy {
+            max-width: 400px;
+            margin: 0;
+            color: rgba(255,255,255,0.72);
+            font-size: 0.88rem;
+            line-height: 1.9;
+        }
+
+        .footer-title {
+            margin: 0 0 20px;
+            color: white;
+            font-size: 1.05rem;
+        }
+
+        .footer-links {
+            display: grid;
+            gap: 12px;
+            font-size: 0.87rem;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.78);
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: #7DEBD0;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 11px;
+            margin-top: 21px;
+        }
+
+        .footer-social a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 39px;
+            height: 39px;
+            border: 1px solid rgba(255,255,255,0.14);
+            border-radius: 13px;
+            background: rgba(255,255,255,0.08);
+            color: white;
+            transition: all 0.2s ease;
+        }
+
+        .footer-social a:hover {
+            transform: translateY(-3px);
+            background: var(--mint-primary);
+        }
+
+        .footer-bottom {
+            margin-top: 38px;
+            padding-top: 22px;
+            border-top: 1px solid rgba(255,255,255,0.13);
+            color: rgba(255,255,255,0.64);
+            text-align: center;
+            font-size: 0.81rem;
+            line-height: 1.8;
+        }
+
+        /* Botón flotante de WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            z-index: 200;
+            right: 22px;
+            bottom: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 58px;
+            height: 58px;
+            border: 3px solid rgba(255,255,255,0.9);
+            border-radius: 50%;
+            background: #20B96B;
+            color: white;
+            font-size: 1.8rem;
+            box-shadow: 0 9px 25px rgba(0,0,0,0.2);
+            transition: transform 0.2s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: translateY(-4px) scale(1.04);
+        }
+
+        /* Adaptación a pantallas pequeñas */
+        @media (max-width: 1000px) {
+            .nav {
+                flex-wrap: wrap;
+                justify-content: space-between;
+                padding: 14px 0;
+            }
+
+            .nav-links {
+                order: 3;
+                width: 100%;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 10px 24px;
+                padding: 7px 0 3px;
+            }
+
+            .blog-grid {
+                grid-template-columns: minmax(0, 1.5fr) minmax(250px, 0.9fr);
+                gap: 22px;
+            }
+
+            .widget {
+                padding: 21px;
+            }
+        }
+
+        @media (max-width: 760px) {
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                align-items: start;
+            }
+
+            .newsletter-widget {
+                grid-column: span 2;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+            }
+
+            .footer-grid > div:first-child {
+                grid-column: span 2;
+            }
+
+            .contact-strip-inner {
+                align-items: flex-start;
+                flex-direction: column;
+                padding: 27px;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .container {
+                width: min(100% - 26px, 1160px);
+            }
+
+            .topbar-inner {
+                justify-content: center;
+                text-align: center;
+            }
+
+            .topbar span {
+                justify-content: center;
+                width: 100%;
+            }
+
+            .nav {
+                gap: 12px;
+            }
+
+            .brand-mark {
+                width: 42px;
+                height: 42px;
+                border-radius: 13px;
+            }
+
+            .brand-text strong {
+                font-size: 0.98rem;
+            }
+
+            .brand-text small {
+                font-size: 0.58rem;
+            }
+
+            .nav-cta {
+                padding: 11px 13px;
+                font-size: 0.76rem;
+            }
+
+            .nav-cta i {
+                display: none;
+            }
+
+            .nav-links {
+                gap: 8px 17px;
+                font-size: 0.82rem;
+            }
+
+            .hero {
+                padding: 57px 0 62px;
+            }
+
+            .hero p {
+                font-size: 0.92rem;
+            }
+
+            .blog-section {
+                padding: 48px 0 60px;
+            }
+
+            .section-heading {
+                margin-bottom: 25px;
+            }
+
+            .article {
+                border-radius: 20px;
+                margin-bottom: 23px;
+            }
+
+            .article-image {
+                height: 225px;
+            }
+
+            .article-content {
+                padding: 22px 20px 23px;
+            }
+
+            .article-content p {
+                font-size: 0.88rem;
+            }
+
+            .article-date {
+                top: 13px;
+                right: 13px;
+                min-width: 58px;
+                padding: 9px;
+            }
+
+            .article-date b {
+                font-size: 1.35rem;
+            }
+
+            .sidebar {
+                grid-template-columns: 1fr;
+            }
+
+            .newsletter-widget {
+                grid-column: auto;
+            }
+
+            .widget {
+                padding: 22px;
+            }
+
+            .contact-strip {
+                padding-bottom: 55px;
+            }
+
+            .contact-strip-inner {
+                padding: 24px 21px;
+                border-radius: 21px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+
+            .footer-grid > div:first-child {
+                grid-column: auto;
+            }
+
+            footer {
+                padding-top: 44px;
+            }
+
+            .whatsapp-float {
+                right: 14px;
+                bottom: 14px;
+                width: 53px;
+                height: 53px;
+                font-size: 1.65rem;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *, *::before, *::after {
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Barra superior -->
+    <div class="topbar">
+        <div class="container topbar-inner">
+            <span>
+                <i class="fa-solid fa-location-dot"></i>
+                Santa Cruz de Yojoa, Cortés, Honduras
+            </span>
+            <span>
+                <i class="fa-solid fa-phone"></i>
+                <a href="tel:+50493289376">+504 9328-9376</a>
+            </span>
+        </div>
+    </div>
+
+    <!-- Encabezado -->
+    <header>
+        <div class="container nav">
+            <a href="index.html" class="brand" aria-label="Veterinaria Silv - Inicio">
+                <span class="brand-mark">
+                    <i class="fa-solid fa-paw"></i>
+                </span>
+                <span class="brand-text">
+                    <small>Cuidado y cariño</small>
+                    <strong>Veterinaria Silv</strong>
+                </span>
+            </a>
+
+            <nav class="nav-links" aria-label="Menú principal">
+                <a href="index.html">Inicio</a>
+                <a href="blog.html" class="active">Consejos</a>
+                <a href="services.html">Servicios</a>
+                <a href="contact.html">Contacto</a>
+            </nav>
+
+            <a class="nav-cta" href="https://wa.me/50493289376?text=Hola%2C%20quisiera%20agendar%20una%20cita%20para%20mi%20mascota." target="_blank" rel="noopener noreferrer">
+                <i class="fa-solid fa-calendar-check"></i>
+                Agenda una cita
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Portada del blog -->
+        <section class="hero">
+            <div class="container hero-inner">
+                <div class="hero-badge">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                    BLOG VETERINARIO
+                </div>
+
+                <h1>Consejos para cuidar a tu mascota</h1>
+
+                <p>
+                    Aprende a cuidar mejor de tus compañeros de cuatro patas con consejos
+                    sobre salud, alimentación, prevención y bienestar. En Veterinaria Silv,
+                    su salud también es nuestra prioridad.
+                </p>
+
+                <div class="hero-note">
+                    <i class="fa-solid fa-paw"></i>
+                    Amor, prevención y bienestar para perros y gatos
+                </div>
+            </div>
+        </section>
+
+        <!-- Contenido principal -->
+        <section class="blog-section">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow">
+                        <i class="fa-solid fa-book-open"></i>
+                        Aprende con Veterinaria Silv
+                    </span>
+                    <h2>Consejos para una vida más saludable</h2>
+                    <p>
+                        Encuentra información útil para acompañar a tu mascota en cada
+                        etapa de su vida. ¡Pequeños cuidados pueden hacer una gran diferencia!
+                    </p>
+                </div>
+
+                <div class="blog-grid">
+                    <div class="blog-main">
+                        <div class="no-results" id="no-results">
+                            <i class="fa-solid fa-magnifying-glass" style="font-size:1.7rem;color:var(--mint-primary);margin-bottom:10px;"></i>
+                            <p>No encontramos artículos con esa búsqueda. Prueba con otra palabra.</p>
+                        </div>
+
+                        <!-- Artículo 1 -->
+                        <article class="article" data-category="salud animal perros cuidados">
+                            <div class="article-image">
+                                <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=1200&q=85" alt="Perro feliz al aire libre" loading="lazy">
+                                <div class="article-date">
+                                    <b>15</b>
+                                    <span>Ene</span>
+                                </div>
+                            </div>
+
+                            <div class="article-content">
+                                <span class="article-category">
+                                    <i class="fa-solid fa-dog"></i>
+                                    Salud animal
+                                </span>
+
+                                <h2>
+                                    <a href="https://wa.me/50493289376?text=Hola%2C%20quisiera%20consultar%20sobre%20los%20cuidados%20de%20mi%20perro." target="_blank" rel="noopener noreferrer">
+                                        Cuidados esenciales para perros en invierno
+                                    </a>
+                                </h2>
+
+                                <p>
+                                    Descubre cómo proteger a tu perro del frío, cuidar sus patas
+                                    y adaptar sus paseos según el clima. Recuerda que cada mascota
+                                    tiene necesidades diferentes.
+                                </p>
+
+                                <div class="article-meta">
+                                    <span><i class="fa-solid fa-shield-heart"></i> Prevención y cuidado</span>
+                                    <span><i class="fa-solid fa-clock"></i> 4 min de lectura</span>
+                                </div>
+
+                                <a class="read-more" href="https://wa.me/50493289376?text=Hola%2C%20quisiera%20recibir%20consejos%20para%20cuidar%20a%20mi%20perro." target="_blank" rel="noopener noreferrer">
+                                    Consultar sobre mi mascota
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- Artículo 2 -->
+                        <article class="article" data-category="nutricion gatos alimentacion salud">
+                            <div class="article-image">
+                                <img src="https://images.unsplash.com/photo-1519052537078-e6302a4968d4?auto=format&fit=crop&w=1200&q=85" alt="Gato doméstico descansando" loading="lazy">
+                                <div class="article-date">
+                                    <b>12</b>
+                                    <span>Ene</span>
+                                </div>
+                            </div>
+
+                            <div class="article-content">
+                                <span class="article-category">
+                                    <i class="fa-solid fa-bowl-food"></i>
+                                    Nutrición
+                                </span>
+
+                                <h2>
+                                    <a href="https://wa.me/50493289376?text=Hola%2C%20quisiera%20consultar%20sobre%20la%20alimentaci%C3%B3n%20de%20mi%20gato." target="_blank" rel="noopener noreferrer">
+                                        Nutrición adecuada para gatos adultos
+                                    </a>
+                                </h2>
+
+                                <p>
+                                    Una alimentación equilibrada contribuye al bienestar de tu gato.
+                                    Aprende por qué es importante elegir un alimento apropiado para
+                                    su edad, actividad y necesidades particulares.
+                                </p>
+
+                                <div class="article-meta">
+                                    <span><i class="fa-solid fa-heart"></i> Nutrición y bienestar</span>
+                                    <span><i class="fa-solid fa-clock"></i> 5 min de lectura</span>
+                                </div>
+
+                                <a class="read-more" href="https://wa.me/50493289376?text=Hola%2C%20necesito%20orientaci%C3%B3n%20sobre%20la%20nutrici%C3%B3n%20de%20mi%20gato." target="_blank" rel="noopener noreferrer">
+                                    Consultar sobre nutrición
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- Artículo 3 -->
+                        <article class="article" data-category="prevencion vacunas perros gatos salud">
+                            <div class="article-image">
+                                <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=1200&q=85" alt="Perro durante una revisión veterinaria" loading="lazy">
+                                <div class="article-date">
+                                    <b>10</b>
+                                    <span>Ene</span>
+                                </div>
+                            </div>
+
+                            <div class="article-content">
+                                <span class="article-category">
+                                    <i class="fa-solid fa-syringe"></i>
+                                    Prevención
+                                </span>
+
+                                <h2>
+                                    <a href="https://wa.me/50493289376?text=Hola%2C%20quisiera%20informaci%C3%B3n%20sobre%20las%20vacunas%20para%20mi%20mascota." target="_blank" rel="noopener noreferrer">
+                                        La importancia de las vacunas
+                                    </a>
+                                </h2>
+
+                                <p>
+                                    Las vacunas ayudan a proteger a perros y gatos frente a
+                                    enfermedades importantes. Consulta con el veterinario cuál
+                                    es el esquema adecuado para la edad y condición de tu mascota.
+                                </p>
+
+                                <div class="article-meta">
+                                    <span><i class="fa-solid fa-shield-heart"></i> Salud preventiva</span>
+                                    <span><i class="fa-solid fa-clock"></i> 4 min de lectura</span>
+                                </div>
+
+                                <a class="read-more" href="https://wa.me/50493289376?text=Hola%2C%20quisiera%20revisar%20el%20calendario%20de%20vacunaci%C3%B3n%20de%20mi%20mascota." target="_blank" rel="noopener noreferrer">
+                                    Consultar sobre vacunas
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- Artículo 4 -->
+                        <article class="article" data-category="bienestar ejercicio perros cuidados">
+                            <div class="article-image">
+                                <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=1200&q=85" alt="Perros jugando juntos al aire libre" loading="lazy">
+                                <div class="article-date">
+                                    <b>08</b>
+                                    <span>Ene</span>
+                                </div>
+                            </div>
+
+                            <div class="article-content">
+                                <span class="article-category">
+                                    <i class="fa-solid fa-person-walking"></i>
+                                    Bienestar
+                                </span>
+
+                                <h2>
+                                    <a href="https://wa.me/50493289376?text=Hola%2C%20quisiera%20consejos%20sobre%20la%20actividad%20f%C3%ADsica%20para%20mi%20mascota." target="_blank" rel="noopener noreferrer">
+                                        Ejercicio físico: clave para una mascota saludable
+                                    </a>
+                                </h2>
+
+                                <p>
+                                    El juego y la actividad física favorecen el bienestar de las
+                                    mascotas. Conoce cómo adaptar los paseos y juegos a su edad,
+                                    condición física y necesidades.
+                                </p>
+
+                                <div class="article-meta">
+                                    <span><i class="fa-solid fa-paw"></i> Actividad y bienestar</span>
+                                    <span><i class="fa-solid fa-clock"></i> 3 min de lectura</span>
+                                </div>
+
+                                <a class="read-more" href="https://wa.me/50493289376?text=Hola%2C%20quisiera%20consejos%20para%20mejorar%20el%20bienestar%20de%20mi%20mascota." target="_blank" rel="noopener noreferrer">
+                                    Más consejos para mi mascota
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </article>
+
+                        <nav aria-label="Paginación">
+                            <ul class="pagination">
+                                <li><a href="#articulos" aria-label="Página anterior"><i class="fa-solid fa-chevron-left"></i></a></li>
+                                <li><a class="active" href="#articulos" aria-current="page">1</a></li>
+                                <li><a href="#articulos" aria-label="Página 2">2</a></li>
+                                <li><a href="#articulos" aria-label="Página 3">3</a></li>
+                                <li><a href="#articulos" aria-label="Página siguiente"><i class="fa-solid fa-chevron-right"></i></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <!-- Barra lateral -->
+                    <aside class="sidebar">
+                        <div class="widget">
+                            <h3><i class="fa-solid fa-magnifying-glass"></i> Buscar consejos</h3>
+                            <form class="search-form" id="search-form" role="search">
+                                <input id="search-input" type="search" placeholder="Ej. vacunas, gatos..." aria-label="Buscar artículos">
+                                <button type="submit" aria-label="Buscar artículos">
+                                    <i class="fa-solid fa-search"></i>
+                                </button>
+                            </form>
+                        </div>
+
+                        <div class="widget">
+                            <h3><i class="fa-solid fa-layer-group"></i> Categorías</h3>
+                            <ul class="category-list">
+                                <li><a href="#articulos" data-search="salud animal">Salud animal <span>12</span></a></li>
+                                <li><a href="#articulos" data-search="nutricion alimentacion">Nutrición <span>8</span></a></li>
+                                <li><a href="#articulos" data-search="prevencion vacunas">Prevención <span>6</span></a></li>
+                                <li><a href="#articulos" data-search="bienestar ejercicio">Bienestar <span>10</span></a></li>
+                                <li><a href="#articulos" data-search="cuidados">Consejos prácticos <span>9</span></a></li>
+                            </ul>
+                        </div>
+
+                        <div class="widget">
+                            <h3><i class="fa-solid fa-clock-rotate-left"></i> Artículos recientes</h3>
+                            <ul class="recent-list">
+                                <li>
+                                    <a class="recent-thumb" href="#articulos" aria-label="Ver cuidados para perros">
+                                        <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=300&q=80" alt="Perro" loading="lazy">
+                                    </a>
+                                    <div class="recent-info">
+                                        <h4><a href="#articulos">Cuidados esenciales para perros</a></h4>
+                                        <time datetime="2026-01-15">15 de enero</time>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <a class="recent-thumb" href="#articulos" aria-label="Ver consejos de alimentación para gatos">
+                                        <img src="https://images.unsplash.com/photo-1519052537078-e6302a4968d4?auto=format&fit=crop&w=300&q=80" alt="Gato" loading="lazy">
+                                    </a>
+                                    <div class="recent-info">
+                                        <h4><a href="#articulos">Alimentación para gatos adultos</a></h4>
+                                        <time datetime="2026-01-12">12 de enero</time>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <a class="recent-thumb" href="#articulos" aria-label="Ver información sobre vacunación">
+                                        <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=300&q=80" alt="Perro en revisión veterinaria" loading="lazy">
+                                    </a>
+                                    <div class="recent-info">
+                                        <h4><a href="#articulos">Importancia de la vacunación</a></h4>
+                                        <time datetime="2026-01-10">10 de enero</time>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="widget">
+                            <h3><i class="fa-solid fa-tags"></i> Temas populares</h3>
+                            <div class="tag-list">
+                                <a href="#articulos" data-search="perros">Perros</a>
+                                <a href="#articulos" data-search="gatos">Gatos</a>
+                                <a href="#articulos" data-search="salud">Salud</a>
+                                <a href="#articulos" data-search="vacunas">Vacunas</a>
+                                <a href="#articulos" data-search="nutricion">Nutrición</a>
+                                <a href="#articulos" data-search="cuidados">Cuidados</a>
+                                <a href="#articulos" data-search="bienestar">Bienestar</a>
+                            </div>
+                        </div>
+
+                        <div class="widget newsletter-widget">
+                            <h3><i class="fa-solid fa-envelope-open-text"></i> Consejos por correo</h3>
+                            <p class="newsletter-copy">
+                                Mantente al día con recomendaciones para cuidar la salud y
+                                felicidad de tus compañeros peludos.
+                            </p>
+
+                            <form class="newsletter-form" id="newsletter-form">
+                                <input type="email" id="newsletter-email" placeholder="Tu correo electrónico" aria-label="Tu correo electrónico" required>
+                                <button type="submit">
+                                    <i class="fa-solid fa-paper-plane"></i>
+                                    Quiero recibir consejos
+                                </button>
+                            </form>
+                            <p class="form-message" id="form-message" role="status"></p>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- Llamada a la acción -->
+        <section class="contact-strip">
+            <div class="container">
+                <div class="contact-strip-inner">
+                    <div>
+                        <h2>¿Tienes dudas sobre la salud de tu mascota?</h2>
+                        <p>
+                            Cada mascota es diferente. Comunícate con Veterinaria Silv
+                            para consultar nuestros servicios y recibir orientación sobre
+                            el cuidado de tu compañero.
+                        </p>
+                    </div>
+
+                    <a class="button-primary" href="https://wa.me/50493289376?text=Hola%2C%20quisiera%20hacer%20una%20consulta%20sobre%20mi%20mascota." target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        Escríbenos
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="index.html" class="footer-brand">
+                        <span class="brand-mark">
+                            <i class="fa-solid fa-paw"></i>
+                        </span>
+                        <span>Veterinaria Silv</span>
+                    </a>
+
+                    <p class="footer-copy">
+                        Somos un centro veterinario dedicado al bienestar integral de tus
+                        mascotas, con atención profesional, responsabilidad y mucho cariño.
+                        ¡Gracias por confiar en nosotros!
+                    </p>
+
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/50493289376" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="footer-title">Navegación</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="blog.html">Consejos</a></li>
+                        <li><a href="services.html">Servicios</a></li>
+                        <li><a href="contact.html">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="footer-title">Contáctanos</h3>
+                    <ul class="footer-links">
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            Santa Cruz de Yojoa, Cortés
+                        </li>
+                        <li>
+                            <a href="tel:+50493289376">
+                                <i class="fa-solid fa-phone"></i>
+                                +504 9328-9376
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/50493289376" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-whatsapp"></i>
+                                Escríbenos por WhatsApp
+                            </a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-clock"></i>
+                            Emergencias: consulta disponibilidad
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                © 2026 Veterinaria Silv. Todos los derechos reservados.
+                <br>
+                Cuidamos de quienes llenan tu vida de alegría.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a class="whatsapp-float"
+       href="https://wa.me/50493289376?text=Hola%2C%20Veterinaria%20Silv.%20Quisiera%20hacer%20una%20consulta."
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Contactar a Veterinaria Silv por WhatsApp"
+       title="Escríbenos por WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Buscador de artículos
+        const searchForm = document.getElementById("search-form");
+        const searchInput = document.getElementById("search-input");
+        const articles = Array.from(document.querySelectorAll(".article"));
+        const noResults = document.getElementById("no-results");
+
+        function normalizeText(text) {
+            return text
+                .toLowerCase()
+                .normalize("NFD")
+                .replace(/[\u0300-\u036f]/g, "");
+        }
+
+        function filterArticles(term) {
+            const query = normalizeText(term.trim());
+            let visibleCount = 0;
+
+            articles.forEach(article => {
+                const searchableText = normalizeText(
+                    article.innerText + " " + (article.dataset.category || "")
+                );
+
+                const matches = searchableText.includes(query);
+                article.style.display = matches ? "" : "none";
+
+                if (matches) visibleCount++;
+            });
+
+            noResults.style.display = visibleCount === 0 ? "block" : "none";
+        }
+
+        searchForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+            filterArticles(searchInput.value);
+            document.querySelector(".blog-main").scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+        });
+
+        searchInput.addEventListener("input", function() {
+            filterArticles(searchInput.value);
+        });
+
+        // Categorías y etiquetas: filtran los artículos relacionados
+        document.querySelectorAll("[data-search]").forEach(link => {
+            link.addEventListener("click", function(event) {
+                event.preventDefault();
+                const term = this.dataset.search;
+                searchInput.value = term;
+                filterArticles(term);
+
+                document.querySelector(".blog-main").scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+            });
+        });
+
+        // Mensaje informativo del formulario de correo
+        // Para recibir suscripciones reales, conecta este formulario a un servicio de correo.
+        const newsletterForm = document.getElementById("newsletter-form");
+        const formMessage = document.getElementById("form-message");
+
+        newsletterForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            formMessage.textContent =
+                "¡Gracias por tu interés! El formulario todavía necesita conectarse a un servicio de suscripción para registrar tu correo.";
+            formMessage.style.display = "block";
+        });
+    </script>
+</body>
+</html>
